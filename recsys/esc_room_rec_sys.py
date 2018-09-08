@@ -7,6 +7,7 @@ from surprise import accuracy
 from surprise import Reader
 
 from surprise.model_selection import cross_validate
+from surprise.prediction_algorithms import *
 
 class esc_room_rec_sys:
 
@@ -50,7 +51,8 @@ class esc_room_rec_sys:
         all_data = Dataset.load_from_df(dataset, reader)
 
         # Run 5-fold cross-validation and print results
-        print(cross_validate(algo, all_data, measures=['RMSE', 'MAE'], cv=10, verbose=True))
+        results = cross_validate(algo, all_data, measures=['RMSE'], cv=10, verbose=True)
+        print(results['test_rmse'].mean())
 
     def predict_rating(self):
 
@@ -77,4 +79,5 @@ class esc_room_rec_sys:
         algo = SVD()
         algo.fit(built_trainset)
         predictions = algo.test(built_testset)
-        print(accuracy.rmse(predictions))
+        results = accuracy.rmse(predictions)
+        print(results)
