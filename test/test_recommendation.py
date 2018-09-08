@@ -14,7 +14,7 @@ class TestRecSysMethods(unittest.TestCase):
         recsys = esc_room_rec_sys()
         recsys.read_data('..//resources//dataset_8-9-2018.csv')
         recsys.set_params({'date_split_threshold': np.datetime64('2018-05-01')})
-        recsys.predict_rating()
+        recsys.predict_rating_using_cross_validation()
 
     def test_isupper(self):
         self.assertTrue('FOO'.isupper())

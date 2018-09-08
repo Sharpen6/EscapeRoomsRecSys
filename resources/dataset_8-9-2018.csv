@@ -1,4 +1,4 @@
-index,item_id,user_id,user_name,rating,aprox_review_date
+index,itemID,userID,user_name,rating,aprox_review_date
 0,https://www.room.run/he/rooms/card-of-jack,834328320058878,Sasha  Zilberman,10,2017-09-17
 1,https://www.room.run/he/rooms/card-of-jack,1609468749148612,Dina Tikhonova,10,2018-04-11
 2,https://www.room.run/he/rooms/card-of-jack,10155313688807872,Mike Bustenai,10,2018-03-12

@@ -1,7 +1,12 @@
 import numpy as np
 import pandas as pd
-from sklearn import cross_validation as cv
 
+from surprise import SVD
+from surprise import Dataset
+from surprise import accuracy
+from surprise import Reader
+
+from surprise.model_selection import cross_validate
 
 class esc_room_rec_sys:
 
@@ -19,11 +24,11 @@ class esc_room_rec_sys:
     def analyse_data(self, dataset, description):
         print('~~~~~~~   Analysing dataset: ' + description + '~~~~~~~')
         print('Shape: ' + str(dataset.shape))
-        n_users = dataset.user_id.unique().shape[0]
-        n_items = dataset.item_id.unique().shape[0]
+        n_users = dataset.userID.unique().shape[0]
+        n_items = dataset.itemID.unique().shape[0]
         print('Number of users = ' + str(n_users) + ' | Number of rooms = ' + str(n_items))
-        user_counts = dataset.user_id.value_counts()
-        items_counts = dataset.item_id.value_counts()
+        #user_counts = dataset.userID.value_counts()
+        #items_counts = dataset.itemID.value_counts()
         pass
     def set_params(self, params):
         if 'date_split_threshold' in params:
@@ -36,12 +41,40 @@ class esc_room_rec_sys:
 
         self.parameters = {'date_split_threshold' : date_split_threshold,
                            }
+    def predict_rating_using_cross_validation(self):
+
+        algo = SVD()
+        reader = Reader(rating_scale=(1, 10))
+        columns = ['userID', 'itemID', 'rating']
+        dataset = self.dataset[columns].dropna(how='any')
+        all_data = Dataset.load_from_df(dataset, reader)
+
+        # Run 5-fold cross-validation and print results
+        print(cross_validate(algo, all_data, measures=['RMSE', 'MAE'], cv=10, verbose=True))
 
     def predict_rating(self):
-        threshold = self.parameters['date_split_threshold']
 
-        train_data = self.dataset[self.dataset['aprox_review_date'] < threshold]
-        test_data = self.dataset[self.dataset['aprox_review_date'] > threshold]
+        threshold = self.parameters['date_split_threshold']
+        columns = ['userID', 'itemID', 'rating']
+
+        train_data = self.dataset[self.dataset['aprox_review_date'] < threshold][columns]
+        test_data = self.dataset[self.dataset['aprox_review_date'] > threshold][columns]
+
+        train_data = train_data.dropna(how='any')
+        test_data = test_data.dropna(how='any')
 
         self.analyse_data(train_data, 'Train set')
         self.analyse_data(test_data, 'Test set')
+
+        reader = Reader(rating_scale=(1, 10))
+
+        train_data = Dataset.load_from_df(train_data, reader)
+        test_data = Dataset.load_from_df(test_data, reader)
+
+        built_trainset = train_data.build_full_trainset()
+        built_testset = test_data.build_testset()
+
+        algo = SVD()
+        algo.fit(built_trainset)
+        predictions = algo.test(built_testset)
+        print(accuracy.rmse(predictions))
