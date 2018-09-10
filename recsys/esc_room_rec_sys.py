@@ -16,7 +16,7 @@ class esc_room_rec_sys:
 
     def read_data(self, file_path):
         self.dataset = pd.read_csv(file_path).set_index(['index'])
-        self.dataset['aprox_review_date'] = self.dataset['aprox_review_date'].astype('datetime64[ns]')
+        self.dataset['timestamp'] = self.dataset['timestamp'].astype('datetime64[ns]')
 
         self.analyse_data(self.dataset, 'All records')
 
@@ -45,7 +45,7 @@ class esc_room_rec_sys:
     def predict_rating_using_cross_validation(self):
 
         algo = SVD()
-        reader = Reader(rating_scale=(1, 10))
+        reader = Reader(rating_scale=(1, 10), line_format='user item rating')
         columns = ['userID', 'itemID', 'rating']
         dataset = self.dataset[columns].dropna(how='any')
         all_data = Dataset.load_from_df(dataset, reader)
