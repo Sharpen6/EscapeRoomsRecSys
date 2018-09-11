@@ -1,10 +1,7 @@
 import unittest
-
-import numpy as np
-
 from recsys.esc_room_rec_sys import *
 
-class TestRecSysMethods(unittest.TestCase):
+class TestManualMethods(unittest.TestCase):
 
     def test_split_dataset(self):
         recsys = esc_room_rec_sys()
