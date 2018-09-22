@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01f1a015-9173-4256-90f3-5f33d2754abc" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/test_manual_runner.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/test_runner.py" />
-      <change beforePath="$PROJECT_DIR$/.idea/EscapeRoomsRecSys.iml" afterPath="$PROJECT_DIR$/.idea/EscapeRoomsRecSys.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/recsys/esc_room_rec_sys.py" afterPath="$PROJECT_DIR$/recsys/esc_room_rec_sys.py" />
-      <change beforePath="$PROJECT_DIR$/resources/dataset_8-9-2018.csv" afterPath="$PROJECT_DIR$/resources/dataset_8-9-2018.csv" />
-      <change beforePath="$PROJECT_DIR$/test/test_recommendation.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test/test_runner.py" afterPath="$PROJECT_DIR$/test/test_runner.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,14 +15,54 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="test_runner.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="test_runner.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/test_runner.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="29" column="22" lean-forward="false" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+            <state relative-caret-position="442">
+              <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="algo_base.py" pinned="false" current-in-tab="false">
+        <entry file="file://R:/Anaconda3/Lib/site-packages/surprise/prediction_algorithms/algo_base.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="266" column="37" lean-forward="false" selection-start-line="266" selection-start-column="30" selection-end-line="266" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="similarities.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/-1789782354/surprise/similarities.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-281">
+              <caret line="97" column="4" lean-forward="false" selection-start-line="97" selection-start-column="4" selection-end-line="97" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="frame.py" pinned="false" current-in-tab="false">
+        <entry file="file://R:/Anaconda3/Lib/site-packages/pandas/core/frame.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-531">
+              <caret line="4390" column="26" lean-forward="false" selection-start-line="4390" selection-start-column="26" selection-end-line="4390" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="case.py" pinned="false" current-in-tab="false">
+        <entry file="file://R:/Anaconda3/Lib/unittest/case.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="600">
+              <caret line="604" column="0" lean-forward="false" selection-start-line="604" selection-start-column="0" selection-end-line="604" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -46,18 +82,18 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://R:/Anaconda3/Lib/unittest/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2403">
+            <state relative-caret-position="818">
               <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="esc_room_rec_sys.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="esc_room_rec_sys.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/recsys/esc_room_rec_sys.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="61" column="49" lean-forward="false" selection-start-line="61" selection-start-column="49" selection-end-line="61" selection-end-column="49" />
+            <state relative-caret-position="375">
+              <caret line="61" column="59" lean-forward="false" selection-start-line="61" selection-start-column="59" selection-end-line="61" selection-end-column="59" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -65,21 +101,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="case.py" pinned="false" current-in-tab="false">
-        <entry file="file://R:/Anaconda3/Lib/unittest/case.py">
+      <file leaf-file-name="accuracy.py" pinned="false" current-in-tab="false">
+        <entry file="file://R:/Anaconda3/Lib/site-packages/surprise/accuracy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15957">
-              <caret line="604" column="0" lean-forward="false" selection-start-line="604" selection-start-column="0" selection-end-line="604" selection-end-column="0" />
+            <state relative-caret-position="190">
+              <caret line="21" column="29" lean-forward="false" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="datetimes.py" pinned="false" current-in-tab="false">
-        <entry file="file://R:/Anaconda3/Lib/site-packages/pandas/core/indexes/datetimes.py">
+      <file leaf-file-name="matrix_factorization.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/-1789782354/surprise/prediction_algorithms/matrix_factorization.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2052">
-              <caret line="132" column="0" lean-forward="false" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
+            <state relative-caret-position="17253">
+              <caret line="641" column="8" lean-forward="false" selection-start-line="641" selection-start-column="8" selection-end-line="641" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -116,16 +152,16 @@
         <option value="$PROJECT_DIR$/test/test_recommendation.py" />
         <option value="$PROJECT_DIR$/test/test_why_all_run.py" />
         <option value="$PROJECT_DIR$/test/test_manual_runner.py" />
-        <option value="$PROJECT_DIR$/test/test_runner.py" />
         <option value="$PROJECT_DIR$/recsys/esc_room_rec_sys.py" />
+        <option value="$PROJECT_DIR$/test/test_runner.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-159" />
-    <option name="y" value="417" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1936" />
-    <option name="height" value="1100" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -193,25 +229,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for test_runner.TestRecSysMethods.test_one_fold_by_time">
-    <configuration name="esc_room_rec_sys" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/recsys" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="EscapeRoomsRecSys" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/recsys/esc_room_rec_sys.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
+  <component name="RunManager" selected="Python tests.Unittests for test_runner.TestRecSysMethods.test_all_algorithms">
     <configuration name="test_recommendation" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -229,6 +247,20 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="Unittests for test_runner.TestRecSysMethods.test_all_algorithms" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="EscapeRoomsRecSys" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_runner.TestRecSysMethods.test_all_algorithms&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
     <configuration name="Unittests for test_runner.TestRecSysMethods.test_one_fold_by_time" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -258,7 +290,7 @@
       <option name="_new_target" value="&quot;test_why_all_run.TestRecSysMethods.test_2&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
-    <configuration name="py.test in test_manual_runner.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests in test_runner.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -268,25 +300,24 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="EscapeRoomsRecSys" />
-      <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/test/test_manual_runner.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test/test_runner.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.test_recommendation" />
-      <item index="1" class="java.lang.String" itemvalue="Python.esc_room_rec_sys" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in test_manual_runner.py" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests for test_why_all_run.TestRecSysMethods.test_2" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests for test_runner.TestRecSysMethods.test_one_fold_by_time" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests for test_why_all_run.TestRecSysMethods.test_2" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for test_runner.TestRecSysMethods.test_one_fold_by_time" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests for test_runner.TestRecSysMethods.test_all_algorithms" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in test_runner.py" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests for test_runner.TestRecSysMethods.test_one_fold_by_time" />
-        <item index="1" class="java.lang.String" itemvalue="Python.test_recommendation" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for test_why_all_run.TestRecSysMethods.test_2" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.py.test in test_manual_runner.py" />
-        <item index="4" class="java.lang.String" itemvalue="Python.esc_room_rec_sys" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests for test_runner.TestRecSysMethods.test_all_algorithms" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in test_runner.py" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for test_runner.TestRecSysMethods.test_one_fold_by_time" />
+        <item index="3" class="java.lang.String" itemvalue="Python.test_recommendation" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests for test_why_all_run.TestRecSysMethods.test_2" />
       </list>
     </recent_temporary>
   </component>
@@ -307,35 +338,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_test_runner_TestRecSysMethods_test_one_fold_by_time - 2018.09.10 at 22h 54m 05s.xml">
-      <configuration name="Unittests for test_runner.TestRecSysMethods.test_one_fold_by_time" configurationId="tests" />
+    <history-entry file="Unittests_for_test_runner_TestRecSysMethods_test_all_algorithms - 2018.09.18 at 17h 51m 20s.xml">
+      <configuration name="Unittests for test_runner.TestRecSysMethods.test_all_algorithms" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_runner_TestRecSysMethods_test_one_fold_by_time - 2018.09.10 at 22h 54m 15s.xml">
-      <configuration name="Unittests for test_runner.TestRecSysMethods.test_one_fold_by_time" configurationId="tests" />
+    <history-entry file="Unittests_for_test_runner_TestRecSysMethods_test_all_algorithms - 2018.09.18 at 17h 51m 44s.xml">
+      <configuration name="Unittests for test_runner.TestRecSysMethods.test_all_algorithms" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_runner_TestRecSysMethods_test_one_fold_by_time - 2018.09.10 at 23h 12m 37s.xml">
-      <configuration name="Unittests for test_runner.TestRecSysMethods.test_one_fold_by_time" configurationId="tests" />
+    <history-entry file="Unittests_for_test_runner_TestRecSysMethods_test_all_algorithms - 2018.09.18 at 17h 52m 21s.xml">
+      <configuration name="Unittests for test_runner.TestRecSysMethods.test_all_algorithms" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_runner_TestRecSysMethods_test_one_fold_by_time - 2018.09.10 at 23h 13m 27s.xml">
-      <configuration name="Unittests for test_runner.TestRecSysMethods.test_one_fold_by_time" configurationId="tests" />
+    <history-entry file="Unittests_for_test_runner_TestRecSysMethods_test_all_algorithms - 2018.09.18 at 17h 52m 52s.xml">
+      <configuration name="Unittests for test_runner.TestRecSysMethods.test_all_algorithms" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_runner_TestRecSysMethods_test_one_fold_by_time - 2018.09.10 at 23h 13m 51s.xml">
-      <configuration name="Unittests for test_runner.TestRecSysMethods.test_one_fold_by_time" configurationId="tests" />
+    <history-entry file="Unittests_for_test_runner_TestRecSysMethods_test_all_algorithms - 2018.09.18 at 17h 53m 26s.xml">
+      <configuration name="Unittests for test_runner.TestRecSysMethods.test_all_algorithms" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_runner_TestRecSysMethods_test_one_fold_by_time - 2018.09.10 at 23h 14m 55s.xml">
-      <configuration name="Unittests for test_runner.TestRecSysMethods.test_one_fold_by_time" configurationId="tests" />
+    <history-entry file="Unittests_for_test_runner_TestRecSysMethods_test_all_algorithms - 2018.09.18 at 17h 55m 09s.xml">
+      <configuration name="Unittests for test_runner.TestRecSysMethods.test_all_algorithms" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_runner_TestRecSysMethods_test_one_fold_by_time - 2018.09.10 at 23h 20m 38s.xml">
-      <configuration name="Unittests for test_runner.TestRecSysMethods.test_one_fold_by_time" configurationId="tests" />
+    <history-entry file="Unittests_for_test_runner_TestRecSysMethods_test_all_algorithms - 2018.09.18 at 17h 56m 23s.xml">
+      <configuration name="Unittests for test_runner.TestRecSysMethods.test_all_algorithms" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_runner_TestRecSysMethods_test_one_fold_by_time - 2018.09.10 at 23h 25m 46s.xml">
-      <configuration name="Unittests for test_runner.TestRecSysMethods.test_one_fold_by_time" configurationId="tests" />
+    <history-entry file="Unittests_for_test_runner_TestRecSysMethods_test_all_algorithms - 2018.09.18 at 17h 58m 10s.xml">
+      <configuration name="Unittests for test_runner.TestRecSysMethods.test_all_algorithms" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_runner_TestRecSysMethods_test_one_fold_by_time - 2018.09.10 at 23h 26m 05s.xml">
-      <configuration name="Unittests for test_runner.TestRecSysMethods.test_one_fold_by_time" configurationId="tests" />
+    <history-entry file="Unittests_for_test_runner_TestRecSysMethods_test_all_algorithms - 2018.09.18 at 18h 29m 08s.xml">
+      <configuration name="Unittests for test_runner.TestRecSysMethods.test_all_algorithms" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_runner_TestRecSysMethods_test_one_fold_by_time - 2018.09.10 at 23h 26m 21s.xml">
-      <configuration name="Unittests for test_runner.TestRecSysMethods.test_one_fold_by_time" configurationId="tests" />
+    <history-entry file="Unittests_for_test_runner_TestRecSysMethods_test_all_algorithms - 2018.09.18 at 18h 32m 51s.xml">
+      <configuration name="Unittests for test_runner.TestRecSysMethods.test_all_algorithms" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -350,16 +381,16 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13382508" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3021739" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16086957" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35108694" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.57608694" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -374,38 +405,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="69" />
+      <option name="time" value="73" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://R:/Anaconda3/Lib/unittest/case.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15957">
-          <caret line="604" column="0" lean-forward="false" selection-start-line="604" selection-start-column="0" selection-end-line="604" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://R:/Anaconda3/Lib/site-packages/pandas/core/indexes/datetimes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2052">
-          <caret line="132" column="0" lean-forward="false" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recsys/esc_room_rec_sys.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1215">
-          <caret line="57" column="30" lean-forward="false" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_recommendation.py" />
     <entry file="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/-1789782354/surprise/prediction_algorithms/matrix_factorization.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="11340">
@@ -598,20 +602,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/-1789782354/surprise/prediction_algorithms/matrix_factorization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11340">
-          <caret line="422" column="56" lean-forward="false" selection-start-line="422" selection-start-column="56" selection-end-line="422" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://R:/Anaconda3/Lib/site-packages/surprise/prediction_algorithms/algo_base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="30" column="30" lean-forward="false" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://R:/Anaconda3/Lib/site-packages/surprise/model_selection/validation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -683,24 +673,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://R:/Anaconda3/Lib/unittest/case.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15957">
-          <caret line="604" column="0" lean-forward="false" selection-start-line="604" selection-start-column="0" selection-end-line="604" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/test_why_all_run.py" />
     <entry file="file://$PROJECT_DIR$/test/test_recommendation.py" />
-    <entry file="file://R:/Anaconda3/Lib/unittest/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2403">
-          <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/test_manual_runner.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
@@ -711,22 +685,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_runner.py">
+    <entry file="file://R:/Anaconda3/Lib/unittest/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="29" column="22" lean-forward="false" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="818">
+          <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/-1789782354/surprise/prediction_algorithms/matrix_factorization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17253">
+          <caret line="641" column="8" lean-forward="false" selection-start-line="641" selection-start-column="8" selection-end-line="641" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://R:/Anaconda3/Lib/site-packages/surprise/accuracy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="21" column="29" lean-forward="false" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://R:/Anaconda3/Lib/site-packages/pandas/core/frame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-531">
+          <caret line="4390" column="26" lean-forward="false" selection-start-line="4390" selection-start-column="26" selection-end-line="4390" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/-1789782354/surprise/similarities.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-281">
+          <caret line="97" column="4" lean-forward="false" selection-start-line="97" selection-start-column="4" selection-end-line="97" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/recsys/esc_room_rec_sys.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="61" column="49" lean-forward="false" selection-start-line="61" selection-start-column="49" selection-end-line="61" selection-end-column="49" />
+        <state relative-caret-position="375">
+          <caret line="61" column="59" lean-forward="false" selection-start-line="61" selection-start-column="59" selection-end-line="61" selection-end-column="59" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://R:/Anaconda3/Lib/site-packages/surprise/prediction_algorithms/knns.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="31" column="14" lean-forward="false" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://R:/Anaconda3/Lib/site-packages/surprise/prediction_algorithms/algo_base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="266" column="37" lean-forward="false" selection-start-line="266" selection-start-column="30" selection-end-line="266" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://R:/Anaconda3/Lib/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="604" column="0" lean-forward="false" selection-start-line="604" selection-start-column="0" selection-end-line="604" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_runner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>

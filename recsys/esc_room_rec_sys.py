@@ -51,19 +51,18 @@ class esc_room_rec_sys:
             res_df = res_df.append({'Algorithm': algoKey, 'RMSE': rmse}, ignore_index=True)
         print(res_df)
 
-    def predict_rating_split_by_time(self, files_pair):
+    def predict_rating_split_by_time(self, files_pair, algo):
         fold_files = [(files_pair)]
         reader = Reader(rating_scale=(1, 10), line_format='user item rating', sep=',')
         data = Dataset.load_from_folds(fold_files, reader=reader)
-        pkf = PredefinedKFold()
 
-        algo = SVDpp(n_factors=20)
-
-        for trainset, testset in pkf.split(data):
+        for trainset, testset in PredefinedKFold().split(data):
             algo.fit(trainset)
             predictions = algo.test(testset)
-            print(accuracy.rmse(predictions, verbose=True))
-        pass
+            rmse = accuracy.rmse(predictions, verbose=False)
+            return rmse
+
+
 
 
     def split_dataset(self, threshold, input, output_train, output_test):
