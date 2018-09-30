@@ -12,7 +12,7 @@ from surprise.prediction_algorithms import *
 
 from surprise.model_selection import PredefinedKFold
 
-
+from k_markov_new import *
 
 class esc_room_rec_sys:
     dataset = None
@@ -51,17 +51,51 @@ class esc_room_rec_sys:
             res_df = res_df.append({'Algorithm': algoKey, 'RMSE': rmse}, ignore_index=True)
         print(res_df)
 
-    def predict_rating_split_by_time(self, files_pair, algo):
-        fold_files = [(files_pair)]
-        reader = Reader(rating_scale=(1, 10), line_format='user item rating', sep=',')
-        data = Dataset.load_from_folds(fold_files, reader=reader)
+    def predict_rating_split_by_time(self, files_pair, algo_test):
 
-        for trainset, testset in PredefinedKFold().split(data):
-            algo.fit(trainset)
-            predictions = algo.test(testset)
-            rmse = accuracy.rmse(predictions, verbose=False)
-            return rmse
+        algo = algo_test[0]
 
+        use_auto_parse = algo_test[1]
+        if use_auto_parse:
+            fold_files = [(files_pair)]
+            reader = Reader(rating_scale=(1, 10), line_format='user item rating', sep=',')
+            data = Dataset.load_from_folds(fold_files, reader=reader)
+
+            for trainset, testset in PredefinedKFold().split(data):
+                algo.fit(trainset)
+                predictions = algo.test(testset)
+                rmse = accuracy.rmse(predictions, verbose=False)
+                return rmse
+        else:
+
+            # Prepare dataset
+
+            train_set = pd.read_csv(files_pair[0], parse_dates=[3])
+            test_set = pd.read_csv(files_pair[1], parse_dates=[3])
+
+            item_to_id_mapping = {}
+            user_to_id_mapping = {}
+
+            item_index = 0
+            user_index = 0
+            all_sets = pd.concat([train_set, test_set])
+            for item in all_sets['itemID']:
+                if item not in item_to_id_mapping.keys():
+                    item_to_id_mapping[item] = item_index
+                    item_index += 1
+            for user in all_sets['userID']:
+                if user not in user_to_id_mapping.keys():
+                    user_to_id_mapping[user] = user_index
+                    user_index += 1
+
+            train_set['itemID'] = train_set['itemID'].map(item_to_id_mapping)
+            test_set['itemID'] = test_set['itemID'].map(item_to_id_mapping)
+            train_set['userID'] = train_set['userID'].map(user_to_id_mapping)
+            test_set['userID'] = test_set['userID'].map(user_to_id_mapping)
+
+            algo.fit(train_set)
+            rec_list = algo.get_top_n_recommendations(test_set)
+            pass
 
 
 
