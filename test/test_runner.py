@@ -33,6 +33,11 @@ class TestRecSysMethods(unittest.TestCase):
                                              '..//resources//dataset_8-9-2018_test.csv'))
         pass
 
+    def test_recommendation(self):
+        algorithms = {
+            'K-Markov': k_markov_rc,
+            'BPRSLIM': bprslim,
+        }
 
     def test_all_algorithms(self):
         algorithms = {

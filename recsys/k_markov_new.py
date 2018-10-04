@@ -58,8 +58,6 @@ class k_markov_rc:
 
         pbar = tqdm(total=len(test_set.userID.unique()))
 
-        rec_list = {}
-
         for userID in test_set.userID.unique():
             pbar.update(1)
             df_user_previous_ratings = self.train_set[self.train_set.userID == userID]

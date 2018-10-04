@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01f1a015-9173-4256-90f3-5f33d2754abc" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/recsys/k_markov_new.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recsys/k_markov_recsys.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test_runner_project_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/EscapeRoomsRecSys.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/EscapeRoomsRecSys.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recsys/esc_room_rec_sys.py" beforeDir="false" afterPath="$PROJECT_DIR$/recsys/esc_room_rec_sys.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recsys/k_markov_new.py" beforeDir="false" afterPath="$PROJECT_DIR$/recsys/k_markov_new.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test_runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_runner.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,33 +18,35 @@
           <entry key="project.closed" value="3" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="911" />
           <entry key="dummy" value="21" />
-          <entry key="py" value="6814" />
+          <entry key="py" value="6912" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="21" />
-          <entry key="Python" value="7725" />
+          <entry key="Python" value="7823" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="csv" value="5" />
-          <entry key="py" value="27" />
+          <entry key="gitignore" value="1" />
+          <entry key="py" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="5" />
-          <entry key="Python" value="27" />
+          <entry key="PLAIN_TEXT" value="6" />
+          <entry key="Python" value="31" />
         </counts>
       </usages-collector>
     </session>
@@ -59,72 +56,70 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/test_runner.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6">
-              <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
+            <state relative-caret-position="585">
+              <caret line="38" column="31" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
+                <marker date="1538670002377" expanded="true" signature="1339:1447" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.PyCharmCE2018.2/system/python_stubs/402946791/surprise/prediction_algorithms/matrix_factorization.py">
+        <entry file="file://$PROJECT_DIR$/test/test_manual_runner.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
-              <caret line="541" column="59" selection-start-line="541" selection-start-column="59" selection-end-line="541" selection-end-column="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/surprise/prediction_algorithms/algo_base.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="188" column="9" selection-start-line="188" selection-start-column="9" selection-end-line="188" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/recsys/esc_room_rec_sys.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="659">
-              <caret line="64" column="34" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-                <marker date="1538075751678" expanded="true" signature="1203:1208" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/surprise/model_selection/validation.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="43" column="17" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/surprise/dataset.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="262" selection-start-line="262" selection-end-line="262" />
+            <state relative-caret-position="51">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/surprise/prediction_algorithms/algo_base.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recsys/k_markov_new.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recsys/k_markov_recsys.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/test_runner_project_2.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
-              <caret line="78" column="89" lean-forward="true" selection-start-line="78" selection-start-column="89" selection-end-line="78" selection-end-column="89" />
+              <caret line="78" column="89" selection-start-line="78" selection-start-column="89" selection-end-line="78" selection-end-column="89" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
-                <element signature="e#887#1520#0" />
               </folding>
             </state>
           </provider>
@@ -133,7 +128,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/pandas/core/frame.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
+            <state relative-caret-position="77418">
               <caret line="4644" selection-start-line="4644" selection-end-line="4644" />
             </state>
           </provider>
@@ -142,7 +137,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/Anaconda3/Lib/ntpath.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
+            <state relative-caret-position="5219">
               <caret line="311" selection-start-line="311" selection-end-line="311" />
             </state>
           </provider>
@@ -151,7 +146,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/surprise/model_selection/split.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
+            <state relative-caret-position="7157">
               <caret line="433" selection-start-line="433" selection-end-line="433" />
             </state>
           </provider>
@@ -198,15 +193,15 @@
         <option value="$USER_HOME$/Anaconda3/Lib/site-packages/surprise/prediction_algorithms/algo_base.py" />
         <option value="$PROJECT_DIR$/recsys/k_markov_recsys.py" />
         <option value="$PROJECT_DIR$/recsys/esc_room_rec_sys.py" />
-        <option value="$PROJECT_DIR$/recsys/k_markov_new.py" />
-        <option value="$PROJECT_DIR$/test/test_runner.py" />
         <option value="$PROJECT_DIR$/test/test_runner_project_2.py" />
+        <option value="$PROJECT_DIR$/test/test_runner.py" />
+        <option value="$PROJECT_DIR$/recsys/k_markov_new.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="196" />
+    <option name="y" value="418" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -251,7 +246,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Surprise" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../theano-BPR" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -416,7 +411,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13382508" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13382508" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -470,16 +465,6 @@
           <line>50</line>
           <option name="timeStamp" value="45" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/recsys/k_markov_new.py</url>
-          <line>101</line>
-          <option name="timeStamp" value="86" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/recsys/k_markov_new.py</url>
-          <line>103</line>
-          <option name="timeStamp" value="94" />
-        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
@@ -501,7 +486,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://R:/Anaconda3/Lib/site-packages/tables/tests/test_vlarray.py" />
     <entry file="file://R:/Anaconda3/Lib/site-packages/pandas/core/indexes/base.py" />
     <entry file="file://$PROJECT_DIR$/test/get_facebook_posts.py" />
     <entry file="file://R:/Anaconda3/Lib/site-packages/surprise/prediction_algorithms/__init__.py" />
@@ -589,37 +573,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/recsys/k_markov_recsys.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="31" selection-start-line="31" selection-end-line="32" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_manual_runner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/teamcity/common.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="48" selection-start-line="48" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recsys/k_markov_new.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1061">
-          <caret line="103" selection-start-line="103" selection-end-line="103" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -658,58 +615,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/surprise/model_selection/split.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="433" selection-start-line="433" selection-end-line="433" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/ntpath.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="311" selection-start-line="311" selection-end-line="311" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/surprise/dataset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="262" selection-start-line="262" selection-end-line="262" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/surprise/model_selection/validation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="43" column="17" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharmCE2018.2/system/python_stubs/402946791/surprise/prediction_algorithms/matrix_factorization.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
+        <state relative-caret-position="9163">
           <caret line="541" column="59" selection-start-line="541" selection-start-column="59" selection-end-line="541" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/surprise/prediction_algorithms/algo_base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="188" column="9" selection-start-line="188" selection-start-column="9" selection-end-line="188" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/pandas/core/frame.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="4644" selection-start-line="4644" selection-end-line="4644" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/recsys/esc_room_rec_sys.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="659">
+        <state relative-caret-position="850">
           <caret line="64" column="34" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
@@ -718,24 +633,96 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_runner.py">
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/surprise/model_selection/validation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6">
-          <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="561">
+          <caret line="43" column="17" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/surprise/dataset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4199">
+          <caret line="262" selection-start-line="262" selection-end-line="262" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/pandas/core/frame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77418">
+          <caret line="4644" selection-start-line="4644" selection-end-line="4644" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/ntpath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5219">
+          <caret line="311" selection-start-line="311" selection-end-line="311" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/surprise/model_selection/split.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7157">
+          <caret line="433" selection-start-line="433" selection-end-line="433" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test_runner_project_2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
-          <caret line="78" column="89" lean-forward="true" selection-start-line="78" selection-start-column="89" selection-end-line="78" selection-end-column="89" />
+          <caret line="78" column="89" selection-start-line="78" selection-start-column="89" selection-end-line="78" selection-end-column="89" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#887#1520#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_manual_runner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_runner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="38" column="31" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <marker date="1538670002377" expanded="true" signature="1339:1447" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recsys/k_markov_new.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recsys/k_markov_recsys.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/surprise/prediction_algorithms/algo_base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
         </state>
       </provider>
     </entry>
