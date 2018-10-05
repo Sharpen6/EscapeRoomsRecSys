@@ -36,7 +36,7 @@ class TestRecSysMethods(unittest.TestCase):
     def test_recommendation(self):
         algorithms = {
             'K-Markov': k_markov_rc,
-            'BPRSLIM': bprslim,
+            #'BPRSLIM': bprslim,
         }
 
     def test_all_algorithms(self):
