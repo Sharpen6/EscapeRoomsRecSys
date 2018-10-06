@@ -42,7 +42,7 @@ class TestRecSysMethods(unittest.TestCase):
     def test_all_algorithms(self):
         algorithms = {
             'Kmarkov': (k_markov_rc(k=3), False),
-            #'SVD (base model)': SVD(),
+            #    'SVD (base model)': SVD(),
 
             #    'SVD++': SVDpp(),
             #    'NMF': NMF(),

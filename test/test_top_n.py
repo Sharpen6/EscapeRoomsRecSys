@@ -2,7 +2,7 @@ import unittest
 from recsys.top_n_algorithms import *
 import pandas as pd
 import numpy as np
-
+from surprise.prediction_algorithms import *
 
 class TestRecSysMethods(unittest.TestCase):
 
@@ -14,21 +14,36 @@ class TestRecSysMethods(unittest.TestCase):
         test_set = pd.read_csv(test_set_path, parse_dates=[3])
 
         rec_sys_algs = {
-            "UserKNN": MyMdediaLiteRecMethod('UserKNN','correlation=Pearson'),
-            #"BPRMF": MyMdediaLiteRecMethod('BPRMF', ''),
-            #"ItemAttributeKNN ": MyMdediaLiteRecMethod('ItemAttributeKNN ', ''),
-            #"ItemKNN": MyMdediaLiteRecMethod('ItemKNN', ''),
-            #"MostPopular": MyMdediaLiteRecMethod('MostPopular', ''),
-            #"Random": MyMdediaLiteRecMethod('Random', ''),
-            #"UserAttributeKNN": MyMdediaLiteRecMethod('UserAttributeKNN', ''),
-            #"WRMF": MyMdediaLiteRecMethod('WRMF', ''),
-            #"Zero": MyMdediaLiteRecMethod('Zero', ''),
-            #"MultiCoreBPRMF ": MyMdediaLiteRecMethod('MultiCoreBPRMF', ''),
-            #"SoftMarginRankingMF": MyMdediaLiteRecMethod('SoftMarginRankingMF', ''),
-            #"WeightedBPRMF": MyMdediaLiteRecMethod('WeightedBPRMF', ''),
-            #"MostPopularByAttributes": MyMdediaLiteRecMethod('MostPopularByAttributes', ''),
-            #"BPRSLIM": MyMdediaLiteRecMethod('BPRSLIM', ''),
-            #"K-markov": k_markov_rc()
+            "(Surprise) SVD (base model)": SurpriseRecMethod(SVD()),
+            "(Surprise) SVD++": SurpriseRecMethod(SVDpp()),
+            "(Surprise) NMF": SurpriseRecMethod(NMF()),
+            "(Surprise) SlopeOne": SurpriseRecMethod(SlopeOne()),
+            "(Surprise) KNNBaseline": SurpriseRecMethod(KNNBaseline()),
+            "(Surprise) KNNBasic cosine user min = 1": SurpriseRecMethod(KNNBasic(sim_options={'name': 'cosine', 'user_based': True})),
+            "(Surprise) KNNBasic pearson user": SurpriseRecMethod(KNNBasic(sim_options={'name': 'pearson_baseline', 'user_based': True})),
+            "(Surprise) KNNBasic cosine item": SurpriseRecMethod(KNNBasic(sim_options={'name': 'cosine', 'user_based': False})),
+            "(Surprise) KNNBasic pearson item": SurpriseRecMethod(KNNBasic(sim_options={'name': 'pearson_baseline', 'user_based': False})),
+            "(Surprise) KNNWithMeans": SurpriseRecMethod(KNNWithMeans()),
+            "(Surprise) KNNWithZScore": SurpriseRecMethod(KNNWithZScore()),
+            "(Surprise) CoClustering": SurpriseRecMethod(CoClustering()),
+            "(Surprise) BaselineOnly": SurpriseRecMethod(BaselineOnly()),
+            "(Surprise) NormalPredictor": SurpriseRecMethod(NormalPredictor()),
+
+            #"(MyMediaLite) UserKNN": MyMdediaLiteRecMethod('UserKNN','correlation=Pearson'),
+            #"(MyMediaLite) BPRMF": MyMdediaLiteRecMethod('BPRMF', ''),
+            #"(MyMediaLite) ItemAttributeKNN ": MyMdediaLiteRecMethod('ItemAttributeKNN ', ''),
+            #"(MyMediaLite) ItemKNN": MyMdediaLiteRecMethod('ItemKNN', ''),
+            #"(MyMediaLite) MostPopular": MyMdediaLiteRecMethod('MostPopular', ''),
+            #"(MyMediaLite) Random": MyMdediaLiteRecMethod('Random', ''),
+            #"(MyMediaLite) UserAttributeKNN": MyMdediaLiteRecMethod('UserAttributeKNN', ''),
+            #"(MyMediaLite) WRMF": MyMdediaLiteRecMethod('WRMF', ''),
+            #"(MyMediaLite) Zero": MyMdediaLiteRecMethod('Zero', ''),
+            #"(MyMediaLite) MultiCoreBPRMF ": MyMdediaLiteRecMethod('MultiCoreBPRMF', ''),
+            #"(MyMediaLite) SoftMarginRankingMF": MyMdediaLiteRecMethod('SoftMarginRankingMF', ''),
+            #"(MyMediaLite) WeightedBPRMF": MyMdediaLiteRecMethod('WeightedBPRMF', ''),
+            #"(MyMediaLite) MostPopularByAttributes": MyMdediaLiteRecMethod('MostPopularByAttributes', ''),
+            #"(MyMediaLite) BPRSLIM": MyMdediaLiteRecMethod('BPRSLIM', ''),
+            #"K-markov": k_markov_rc(k=2)
                         }
 
         algs_results = {}
@@ -76,35 +91,6 @@ class TestRecSysMethods(unittest.TestCase):
                             ignore_index=True)
         return df_stats
 
-    def calc_precision_for_methods(self, test_set, algs_results):
-        precision_ranks = {}
-        df_user_ratings = test_set.groupby('userID')['itemID'].apply(list)
-        for method, recs in algs_results.items():
-            precision_scores = []
-            for user, ratings in df_user_ratings.items():
-                recommended = recs[str(user)]
-                precision_scores.append(self.precision_at_k(ratings, recommended, 10))
-            precision = np.mean(precision_scores)
-            precision_ranks[method] = precision
-        return precision_ranks
-
-    def precision_at_k(self, actual, predicted, k=10):
-        actual = [str(x) for x in actual]
-        if len(predicted) > k:
-            predicted = predicted[:k]
-
-        score = 0.0
-        num_hits = 0.0
-
-        for i, p in enumerate(predicted):
-            if p in actual and p not in predicted[:i]:
-                num_hits += 1.0
-                score += num_hits / (i + 1.0)
-
-        if not actual:
-            return 0.0
-
-        return score / min(len(actual), k)
 
     def numerize_data(self):
 

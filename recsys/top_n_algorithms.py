@@ -4,7 +4,10 @@ import itertools
 from tqdm import tqdm
 import numpy as np
 import operator
-from sklearn.metrics import precision_score
+from surprise import Reader
+from surprise import Dataset
+from surprise.model_selection import PredefinedKFold
+
 class TopNRecsys:
 
     def __init__(self):
@@ -19,7 +22,7 @@ class TopNRecsys:
 
 class k_markov_rc(TopNRecsys):
 
-    def __init__(self, k=3):
+    def __init__(self, k):
         self.k = k
         self.dict_count_k = {}
         self.dict_count_k_m_1 = {}
@@ -27,17 +30,13 @@ class k_markov_rc(TopNRecsys):
 
     def fit(self, train_set):
         self.train_set = train_set
-        pbar = tqdm(total=len(train_set.userID.unique()))
-
         count = 0
-
+        pbar = tqdm(total=len(train_set.userID.unique()))
         for userID in train_set.userID.unique():
             pbar.update(1)
-
             count += 1
             if count > 1000:
                 break
-
             df_user_ratings = train_set[train_set.userID == userID]
             df_user_ratings.sort_values('timestamp')
             grouped_by_time = df_user_ratings.groupby('timestamp')['itemID'].apply(list)
@@ -73,8 +72,6 @@ class k_markov_rc(TopNRecsys):
         pbar = tqdm(total=len(test_set.userID.unique()))
 
         for userID in test_set.userID.unique():
-            if userID == 15 or userID == '15':
-                pass
             pbar.update(1)
             df_user_previous_ratings = self.train_set[self.train_set.userID == userID]
 
@@ -87,19 +84,17 @@ class k_markov_rc(TopNRecsys):
             # Calc for each item
             item_prob = {}
             for itemID in self.train_set.itemID.unique():
+                pass
                 item_prob_sum = [0]
                 for comb in combinations:
                     for k in itertools.product(*comb + ([itemID],)):
-
                         numerator = None
                         denumerator = None
-
                         if k in self.dict_count_k:
                             numerator = self.dict_count_k[k]
                         k_without_target_item = k[:-1]
                         if k_without_target_item in self.dict_count_k_m_1:
                             denumerator = self.dict_count_k_m_1[k_without_target_item]
-
                         if denumerator is not None and numerator is not None and denumerator != 0 and numerator != 0:
                             prob = numerator / float(denumerator)
                             item_prob_sum.append(prob)
@@ -107,7 +102,12 @@ class k_markov_rc(TopNRecsys):
                 item_prob[itemID] = np.sum(item_prob_sum)
 
             top_list = sorted(item_prob.items(), key=operator.itemgetter(1), reverse=True)
-            result[str(userID)] = [str(i[0]) for i in top_list[:top_n]]
+
+            # is prob for best item is 0 - return empty list
+            if top_list[0][1] == 0:
+                result[str(userID)] = []
+            else:
+                result[str(userID)] = [str(i[0]) for i in top_list[:top_n]]
 
         pbar.close()
         return result
@@ -165,3 +165,51 @@ class MyMdediaLiteRecMethod(TopNRecsys):
                     rec_for_user.append(rec.split(':')[0])
                 user_recommendations[user_id] = rec_for_user
         return user_recommendations
+
+class SurpriseRecMethod(TopNRecsys):
+
+    def __init__(self, method):
+        self.method = method
+
+    def fit(self, train_set):
+        self.train_set = train_set
+
+    def get_top_n_recommendations(self, test_set, top_n):
+        self.test_set = test_set
+
+        test_path_tmp = "..\\resources\\tmp\\test_file.csv"
+        train_path_tmp = "..\\resources\\tmp\\train_file.csv"
+
+        self.train_set.to_csv(train_path_tmp, index=False, header=False)
+        self.test_set.to_csv(test_path_tmp, index=False, header=False)
+
+        fold_files = [(train_path_tmp, test_path_tmp)]
+        reader = Reader(rating_scale=(1, 10), line_format='user item rating', sep=',')
+        data = Dataset.load_from_folds(fold_files, reader=reader)
+
+        for trainset, testset in PredefinedKFold().split(data):
+            self.method.fit(trainset)
+
+        recommendations = {}
+        pbar = tqdm(total=len(self.test_set.userID.unique()))
+        for userID in self.test_set.userID.unique():
+            pbar.update(1)
+
+            if userID not in self.train_set.userID.unique():
+                recommendations[str(userID)] = []
+                continue
+
+            items_expected_ranking = {}
+            for itemID in self.train_set.itemID.unique():
+                # Calc prediction for item for user
+                predicted = self.method.predict(str(userID), str(itemID), clip=False)
+                items_expected_ranking[itemID] = predicted[3]
+            sorted_predictions = sorted(items_expected_ranking.items(), key=operator.itemgetter(1))
+            sorted_predictions.reverse()
+            sorted_predictions = [str(x[0]) for x in sorted_predictions]
+            user_recommendations = sorted_predictions[:top_n]
+            recommendations[str(userID)] = user_recommendations
+        pbar.close()
+        return recommendations
+
+

@@ -11,9 +11,6 @@ from surprise.model_selection import cross_validate
 from surprise.prediction_algorithms import *
 
 from surprise.model_selection import PredefinedKFold
-
-from k_markov_new import *
-
 class esc_room_rec_sys:
     dataset = None
     parameters = None
