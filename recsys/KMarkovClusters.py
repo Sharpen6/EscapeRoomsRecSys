@@ -3,22 +3,43 @@ from tqdm import tqdm
 import numpy as np
 import operator
 from top_n_algorithms import TopNRecsys
+from scipy.stats import *
+import pandas as pd
+from sklearn.cluster import KMeans
 
-class k_markov_rc(TopNRecsys):
+class k_markov_clusters(TopNRecsys):
 
-    def __init__(self, k):
+    def __init__(self, k, clusters=3):
         self.k = k
         self.dict_count_k = {}
         self.dict_count_k_m_1 = {}
         self.train_set = None
+        self.clusters = clusters
+        self.cluster_user_mapping = None
 
     def fit(self, train_set):
         self.train_set = train_set
+        print('Calculate clusters')
+        users_data = self.train_set.groupby('userID')['rating'].agg(['count', 'mean', 'mad', 'median', 'min', 'max', 'std',
+                                                                ('skew', lambda value: skew(value)),
+                                                                ('kurtosis', lambda value: kurtosis(value)),
+                                                                ]
+                                                               ).fillna(0)
+
+        kmeans = KMeans(n_clusters=self.clusters, random_state=0).fit(users_data)
+        users_data = users_data.reset_index()
+        self.cluster_user_mapping = dict(zip(users_data['userID'], kmeans.labels_))
+
         count = 0
         pbar = tqdm(total=len(train_set.userID.unique()))
         for userID in train_set.userID.unique():
             pbar.update(1)
             count += 1
+
+            user_cluster = self.cluster_user_mapping[userID]
+
+
+
             df_user_ratings = train_set[train_set.userID == userID]
             df_user_ratings.sort_values('timestamp')
             grouped_by_time = df_user_ratings.groupby('timestamp')['itemID'].apply(list)
@@ -27,19 +48,25 @@ class k_markov_rc(TopNRecsys):
             if len(grouped_items) <= self.k - 1:
                 continue
 
+            if user_cluster not in self.dict_count_k:
+                self.dict_count_k[user_cluster] = {}
+
+            if user_cluster not in self.dict_count_k_m_1:
+                self.dict_count_k_m_1[user_cluster] = {}
+
             combinations = list(itertools.combinations(grouped_items, r=self.k))
             for combination in combinations:
                 for k in itertools.product(*combination):
-                    if k not in self.dict_count_k:
-                        self.dict_count_k[k] = 0
-                    self.dict_count_k[k] += 1
+                    if k not in self.dict_count_k[user_cluster]:
+                        self.dict_count_k[user_cluster][k] = 0
+                    self.dict_count_k[user_cluster][k] += 1
 
             combinations = list(itertools.combinations(grouped_items, r=self.k - 1))
             for combination in combinations:
                 for k in itertools.product(*combination):
-                    if k not in self.dict_count_k_m_1:
-                        self.dict_count_k_m_1[k] = 0
-                    self.dict_count_k_m_1[k] += 1
+                    if k not in self.dict_count_k_m_1[user_cluster]:
+                        self.dict_count_k_m_1[user_cluster][k] = 0
+                    self.dict_count_k_m_1[user_cluster][k] += 1
             pass
         pbar.close()
         print('Done fitting')
@@ -57,6 +84,14 @@ class k_markov_rc(TopNRecsys):
 
         for userID in test_set.userID.unique():
             pbar.update(1)
+
+            if userID not in self.cluster_user_mapping:
+                result[str(userID)] = []
+                count_failed += 1
+                continue
+
+            user_cluster = self.cluster_user_mapping[userID]
+
             df_user_previous_ratings = self.train_set[self.train_set.userID == userID]
 
             df_user_previous_ratings.sort_values('timestamp')
@@ -72,13 +107,13 @@ class k_markov_rc(TopNRecsys):
                 item_prob_sum = [0]
                 for comb in combinations:
                     for k in itertools.product(*comb + ([itemID],)):
-                        if k in self.dict_count_k:
-                            numerator = self.dict_count_k[k]
+                        if k in self.dict_count_k[user_cluster]:
+                            numerator = self.dict_count_k[user_cluster][k]
                         else:
                             continue
                         k_without_target_item = k[:-1]
-                        if k_without_target_item in self.dict_count_k_m_1:
-                            denumerator = self.dict_count_k_m_1[k_without_target_item]
+                        if k_without_target_item in self.dict_count_k_m_1[user_cluster]:
+                            denumerator = self.dict_count_k_m_1[user_cluster][k_without_target_item]
                         else:
                             continue
                         if denumerator != 0 and numerator != 0:

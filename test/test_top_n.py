@@ -1,8 +1,17 @@
 import unittest
+
+
 from recsys.top_n_algorithms import *
 import pandas as pd
+import os
 import numpy as np
 from surprise.prediction_algorithms import *
+from recsys import SurpriseTopN
+from recsys import MyMediaLiteTopN
+from recsys import KMarkov
+from recsys import KMarkovSim
+from recsys import KMarkovClusters
+from recsys import KMarkovLatest
 
 class TestRecSysMethods(unittest.TestCase):
 
@@ -14,45 +23,59 @@ class TestRecSysMethods(unittest.TestCase):
         test_set = pd.read_csv(test_set_path, parse_dates=[3])
 
         rec_sys_algs = {
-            "(Surprise) SVD (base model)": SurpriseRecMethod(SVD()),
-            "(Surprise) SVD++": SurpriseRecMethod(SVDpp()),
-            "(Surprise) NMF": SurpriseRecMethod(NMF()),
-            "(Surprise) SlopeOne": SurpriseRecMethod(SlopeOne()),
-            "(Surprise) KNNBaseline": SurpriseRecMethod(KNNBaseline()),
-            "(Surprise) KNNBasic cosine user min = 1": SurpriseRecMethod(KNNBasic(sim_options={'name': 'cosine', 'user_based': True})),
-            "(Surprise) KNNBasic pearson user": SurpriseRecMethod(KNNBasic(sim_options={'name': 'pearson_baseline', 'user_based': True})),
-            "(Surprise) KNNBasic cosine item": SurpriseRecMethod(KNNBasic(sim_options={'name': 'cosine', 'user_based': False})),
-            "(Surprise) KNNBasic pearson item": SurpriseRecMethod(KNNBasic(sim_options={'name': 'pearson_baseline', 'user_based': False})),
-            "(Surprise) KNNWithMeans": SurpriseRecMethod(KNNWithMeans()),
-            "(Surprise) KNNWithZScore": SurpriseRecMethod(KNNWithZScore()),
-            "(Surprise) CoClustering": SurpriseRecMethod(CoClustering()),
-            "(Surprise) BaselineOnly": SurpriseRecMethod(BaselineOnly()),
-            "(Surprise) NormalPredictor": SurpriseRecMethod(NormalPredictor()),
-
-            #"(MyMediaLite) UserKNN": MyMdediaLiteRecMethod('UserKNN','correlation=Pearson'),
-            #"(MyMediaLite) BPRMF": MyMdediaLiteRecMethod('BPRMF', ''),
-            #"(MyMediaLite) ItemAttributeKNN ": MyMdediaLiteRecMethod('ItemAttributeKNN ', ''),
-            #"(MyMediaLite) ItemKNN": MyMdediaLiteRecMethod('ItemKNN', ''),
-            #"(MyMediaLite) MostPopular": MyMdediaLiteRecMethod('MostPopular', ''),
-            #"(MyMediaLite) Random": MyMdediaLiteRecMethod('Random', ''),
-            #"(MyMediaLite) UserAttributeKNN": MyMdediaLiteRecMethod('UserAttributeKNN', ''),
-            #"(MyMediaLite) WRMF": MyMdediaLiteRecMethod('WRMF', ''),
-            #"(MyMediaLite) Zero": MyMdediaLiteRecMethod('Zero', ''),
-            #"(MyMediaLite) MultiCoreBPRMF ": MyMdediaLiteRecMethod('MultiCoreBPRMF', ''),
-            #"(MyMediaLite) SoftMarginRankingMF": MyMdediaLiteRecMethod('SoftMarginRankingMF', ''),
-            #"(MyMediaLite) WeightedBPRMF": MyMdediaLiteRecMethod('WeightedBPRMF', ''),
-            #"(MyMediaLite) MostPopularByAttributes": MyMdediaLiteRecMethod('MostPopularByAttributes', ''),
-            #"(MyMediaLite) BPRSLIM": MyMdediaLiteRecMethod('BPRSLIM', ''),
-            #"K-markov": k_markov_rc(k=2)
-                        }
+            #"(Surprise) SVD (base model)": SurpriseTopN.SurpriseRecMethod(SVD()),
+            #"(Surprise) SVD++": SurpriseTopN.SurpriseRecMethod(SVDpp()),
+            #"(Surprise) NMF": SurpriseTopN.SurpriseRecMethod(NMF()),
+            #"(Surprise) SlopeOne": SurpriseTopN.SurpriseRecMethod(SlopeOne()),
+            #"(Surprise) KNNBaseline": SurpriseTopN.SurpriseRecMethod(KNNBaseline()),
+            #"(Surprise) KNNBasic cosine user min = 1": SurpriseTopN.SurpriseRecMethod(KNNBasic(sim_options={'name': 'cosine', 'user_based': True})),
+            #"(Surprise) KNNBasic pearson user": SurpriseTopN.SurpriseRecMethod(KNNBasic(sim_options={'name': 'pearson_baseline', 'user_based': True})),
+            #"(Surprise) KNNBasic cosine item": SurpriseTopN.SurpriseRecMethod(KNNBasic(sim_options={'name': 'cosine', 'user_based': False})),
+            #"(Surprise) KNNBasic pearson item": SurpriseTopN.SurpriseRecMethod(KNNBasic(sim_options={'name': 'pearson_baseline', 'user_based': False})),
+            #"(Surprise) KNNWithMeans": SurpriseTopN.SurpriseRecMethod(KNNWithMeans()),
+            #"(Surprise) KNNWithZScore": SurpriseTopN.SurpriseRecMethod(KNNWithZScore()),
+            #"(Surprise) CoClustering": SurpriseTopN.SurpriseRecMethod(CoClustering()),
+            #"(Surprise) BaselineOnly": SurpriseTopN.SurpriseRecMethod(BaselineOnly()),
+            #"(Surprise) NormalPredictor": SurpriseTopN.SurpriseRecMethod(NormalPredictor()),
+#
+           #"(MyMediaLite) UserKNN": MyMediaLiteTopN.MyMdediaLiteRecMethod('UserKNN', 'correlation=Pearson'),
+           #"(MyMediaLite) BPRMF": MyMediaLiteTopN.MyMdediaLiteRecMethod('BPRMF', ''),
+           #"(MyMediaLite) ItemAttributeKNN ": MyMediaLiteTopN.MyMdediaLiteRecMethod('ItemAttributeKNN ', ''),
+           #"(MyMediaLite) ItemKNN": MyMediaLiteTopN.MyMdediaLiteRecMethod('ItemKNN', ''),
+           #"(MyMediaLite) MostPopular": MyMediaLiteTopN.MyMdediaLiteRecMethod('MostPopular', ''),
+           #"(MyMediaLite) Random": MyMediaLiteTopN.MyMdediaLiteRecMethod('Random', ''),
+           #"(MyMediaLite) UserAttributeKNN": MyMediaLiteTopN.MyMdediaLiteRecMethod('UserAttributeKNN', ''),
+           #"(MyMediaLite) WRMF": MyMediaLiteTopN.MyMdediaLiteRecMethod('WRMF', ''),
+           #"(MyMediaLite) Zero": MyMediaLiteTopN.MyMdediaLiteRecMethod('Zero', ''),
+           #"(MyMediaLite) MultiCoreBPRMF ": MyMediaLiteTopN.MyMdediaLiteRecMethod('MultiCoreBPRMF', ''),
+           #"(MyMediaLite) SoftMarginRankingMF": MyMediaLiteTopN.MyMdediaLiteRecMethod('SoftMarginRankingMF', ''),
+           #"(MyMediaLite) WeightedBPRMF": MyMediaLiteTopN.MyMdediaLiteRecMethod('WeightedBPRMF', ''),
+           #"(MyMediaLite) MostPopularByAttributes": MyMediaLiteTopN.MyMdediaLiteRecMethod('MostPopularByAttributes', ''),
+           #"(MyMediaLite) BPRSLIM": MyMediaLiteTopN.MyMdediaLiteRecMethod('BPRSLIM', ''),
+#
+            #"K-markov(k=1)": KMarkov.k_markov_rc(k=1),
+            "K-markov(k=2)": KMarkov.k_markov_rc(k=2),
+            #"K-markov(k=3)": KMarkov.k_markov_rc(k=3),
+            #"K-markov(k=4)": KMarkov.k_markov_rc(k=4),
+            "K-markov-latest(k=2)": KMarkovLatest.KMarkovLatest(k=2),
+            #"K-markov-similarity":  KMarkovSim.k_markov_rc_user_similarity(k=2),
+            #"K-markov-clustered": KMarkovClusters.k_markov_clusters(k=2, clusters=3)
+            }
 
         algs_results = {}
 
         for name, model in rec_sys_algs.items():
             print(name)
-            model.fit(train_set)
+            model.fit(train_set, False)
             results = model.get_top_n_recommendations(test_set, top_n=10)
-            algs_results[name] = results
+            algs_results[name+'(clean_fake=False)'] = results
+
+        for name, model in rec_sys_algs.items():
+            print(name)
+            model.fit(train_set, True)
+            results = model.get_top_n_recommendations(test_set, top_n=10)
+            algs_results[name+'(clean_fake=True)'] = results
+
 
         stats = self.calc_precision_auc(train_set, test_set, algs_results)
         stats.to_csv('..\\resources\\tmp\\results2.csv')

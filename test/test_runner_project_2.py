@@ -1,7 +1,6 @@
 import unittest
 from tqdm import tqdm
 from recsys.esc_room_rec_sys import *
-from k_markov_new import k_markov_rc
 from scipy.stats import *
 import pandas as pd
 from sklearn.cluster import KMeans
