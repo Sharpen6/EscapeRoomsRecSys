@@ -17,11 +17,7 @@ class MyMdediaLiteRecMethod(TopNRecsys):
         self.params = params
         pass
 
-    def fit(self, train_set, clean_fake):
-        if clean_fake:
-            user_ratings = train_set.groupby('userID')['itemID'].apply(list)
-            fake_users = user_ratings[user_ratings.apply(lambda x: len(x) <= 1)]
-            train_set = train_set[~train_set['userID'].isin(fake_users.keys().tolist())]
+    def fit(self, train_set):
 
         self.train_set = train_set
 
@@ -78,5 +74,3 @@ class MyMdediaLiteRecMethod(TopNRecsys):
                 user_recommendations[user_id] = rec_for_user
             print('skipped: ' + str(count_skipped) + '/' + str(count))
         return user_recommendations
-
-

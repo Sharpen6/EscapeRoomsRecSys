@@ -2,23 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01f1a015-9173-4256-90f3-5f33d2754abc" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/recsys/KMarkov.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recsys/KMarkovClusters.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recsys/KMarkovLatest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recsys/KMarkovSim.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recsys/MyMediaLiteTopN.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recsys/SurpriseTopN.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recsys/k_markov_new.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/recsys/top_n_algorithms.py" beforeDir="false" afterPath="$PROJECT_DIR$/recsys/top_n_algorithms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/tmp/output_file.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/tmp/output_file.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/tmp/recommendations_output_for_method.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/tmp/recommendations_output_for_method.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/tmp/results.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/tmp/results.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/tmp/results2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/tmp/results2.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_runner_project_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_runner_project_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_top_n.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_top_n.py" afterDir="false" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/recsys/CleaningAlgorithms/CleanFakeUsers.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/recsys/CleaningAlgorithms/CleanFakeUsersNoClean.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/recsys/CleaningAlgorithms/CleanFakeUsersRankedOneItem.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/recsys/CleaningAlgorithms/CleanFakeUsersRankedOnly10.py" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/recsys/KMarkov.py" afterPath="$PROJECT_DIR$/recsys/KMarkov.py" />
+      <change beforePath="$PROJECT_DIR$/recsys/KMarkovClusters.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/recsys/KMarkovLatest.py" afterPath="$PROJECT_DIR$/recsys/KMarkovLatest.py" />
+      <change beforePath="$PROJECT_DIR$/recsys/KMarkovSim.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/recsys/MyMediaLiteTopN.py" afterPath="$PROJECT_DIR$/recsys/MyMediaLiteTopN.py" />
+      <change beforePath="$PROJECT_DIR$/recsys/SurpriseTopN.py" afterPath="$PROJECT_DIR$/recsys/SurpriseTopN.py" />
+      <change beforePath="$PROJECT_DIR$/recsys/top_n_algorithms.py" afterPath="$PROJECT_DIR$/recsys/top_n_algorithms.py" />
+      <change beforePath="$PROJECT_DIR$/resources/tmp/output_file.csv" afterPath="$PROJECT_DIR$/resources/tmp/output_file.csv" />
+      <change beforePath="$PROJECT_DIR$/resources/tmp/results.xlsx" afterPath="$PROJECT_DIR$/resources/tmp/results.xlsx" />
+      <change beforePath="$PROJECT_DIR$/resources/tmp/results2.csv" afterPath="$PROJECT_DIR$/resources/tmp/results2.csv" />
+      <change beforePath="$PROJECT_DIR$/test/test_top_n.py" afterPath="$PROJECT_DIR$/test/test_top_n.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,38 +69,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/recsys/top_n_algorithms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
-              <folding>
-                <marker date="1539020619868" expanded="true" signature="17:18" ph="..." />
-                <marker date="1539020619868" expanded="true" signature="17:19" ph="..." />
-                <marker date="1539020619868" expanded="true" signature="42:61" ph="..." />
-                <marker date="1539020619868" expanded="true" signature="98:117" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/recsys/MyMediaLiteTopN.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
-              <folding>
-                <element signature="e#0#22#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
+      <file leaf-file-name="SurpriseTopN.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/recsys/SurpriseTopN.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+            <state relative-caret-position="189">
+              <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
@@ -106,73 +81,95 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/recsys/esc_room_rec_sys.py">
+      <file leaf-file-name="MyMediaLiteTopN.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recsys/MyMediaLiteTopN.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1224">
-              <caret line="84" column="57" selection-start-line="84" selection-start-column="57" selection-end-line="84" selection-end-column="57" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-                <marker date="1538766686665" expanded="true" signature="1174:1179" ph="..." />
-              </folding>
+            <state relative-caret-position="270">
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/recsys/KMarkovSim.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/recsys/KMarkovClusters.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1445">
-              <caret line="92" column="47" selection-start-line="92" selection-start-column="47" selection-end-line="92" selection-end-column="47" />
-              <folding>
-                <element signature="e#0#16#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="test_top_n.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/test_top_n.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1">
-              <caret line="30" column="48" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
+            <state relative-caret-position="31">
+              <caret line="52" column="13" lean-forward="false" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
-                <marker date="1539026634949" expanded="true" signature="425:6599" ph="..." />
+                <element signature="e#8325#9535#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/recsys/KMarkov.py">
+      <file leaf-file-name="CleanFakeUsers.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recsys/CleaningAlgorithms/CleanFakeUsers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="39" column="80" lean-forward="true" selection-start-line="39" selection-start-column="80" selection-end-line="39" selection-end-column="80" />
-              <folding>
-                <element signature="e#0#16#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="81">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/recsys/KMarkovLatest.py">
+      <file leaf-file-name="CleanFakeUsersNoClean.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recsys/CleaningAlgorithms/CleanFakeUsersNoClean.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-408">
-              <caret line="57" column="29" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
-              <folding>
-                <element signature="e#0#16#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="135">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="case.py" pinned="false" current-in-tab="false">
+        <entry file="file://R:/Anaconda3/Lib/unittest/case.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="604" column="0" lean-forward="false" selection-start-line="604" selection-start-column="0" selection-end-line="604" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CleanFakeUsersRankedOneItem.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recsys/CleaningAlgorithms/CleanFakeUsersRankedOneItem.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="81">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CleanFakeUsersRankedOnly10.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recsys/CleaningAlgorithms/CleanFakeUsersRankedOnly10.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="esc_room_rec_sys.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recsys/esc_room_rec_sys.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2619">
+              <caret line="109" column="0" lean-forward="false" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="top_n_algorithms.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recsys/top_n_algorithms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="5" column="27" lean-forward="false" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -235,24 +232,41 @@
         <option value="$PROJECT_DIR$/recsys/k_markov.py" />
         <option value="$PROJECT_DIR$/recsys/k_markov_similarities.py" />
         <option value="$PROJECT_DIR$/test/test_runner_project_2.py" />
+        <option value="R:/Anaconda3/Lib/site-packages/surprise/prediction_algorithms/predictions.py" />
+        <option value="$PROJECT_DIR$/recsys/KMarkovSim.py" />
         <option value="$PROJECT_DIR$/recsys/KMarkovClusters.py" />
-        <option value="$PROJECT_DIR$/recsys/top_n_algorithms.py" />
-        <option value="$PROJECT_DIR$/recsys/SurpriseTopN.py" />
-        <option value="$PROJECT_DIR$/recsys/MyMediaLiteTopN.py" />
-        <option value="$PROJECT_DIR$/test/test_top_n.py" />
         <option value="$PROJECT_DIR$/recsys/KMarkov.py" />
+        <option value="$PROJECT_DIR$/recsys/top_n_algorithms.py" />
         <option value="$PROJECT_DIR$/recsys/KMarkovLatest.py" />
+        <option value="$PROJECT_DIR$/recsys/SurpriseTopN.py" />
+        <option value="$PROJECT_DIR$/CleanFakeUsers.py" />
+        <option value="$PROJECT_DIR$/recsys/MyMediaLiteTopN.py" />
+        <option value="$PROJECT_DIR$/recsys/CleaningAlgorithms/CleanFakeUsersRankedOneItem.py" />
+        <option value="$PROJECT_DIR$/recsys/CleaningAlgorithms/CleanFakeUsersNoClean.py" />
+        <option value="$PROJECT_DIR$/recsys/CleaningAlgorithms/CleanFakeUsers.py" />
+        <option value="$PROJECT_DIR$/recsys/CleaningAlgorithms/CleanFakeUsersRankedOnly10.py" />
+        <option value="$PROJECT_DIR$/test/test_top_n.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
-    <option name="y" value="15" />
-    <option name="width" value="1912" />
-    <option name="height" value="1038" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
@@ -272,19 +286,13 @@
             <path>
               <item name="EscapeRoomsRecSys" type="b2602c69:ProjectViewProjectNode" />
               <item name="EscapeRoomsRecSys" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="recsys" type="462c0819:PsiDirectoryNode" />
+              <item name="CleaningAlgorithms" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="EscapeRoomsRecSys" type="b2602c69:ProjectViewProjectNode" />
               <item name="EscapeRoomsRecSys" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="aggregated" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EscapeRoomsRecSys" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EscapeRoomsRecSys" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="tmp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="EscapeRoomsRecSys" type="b2602c69:ProjectViewProjectNode" />
@@ -295,19 +303,22 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../theano-BPR" />
+    <property name="last_opened_file_path" value="R:/Dropbox/Dropbox/Projects/FraudDetection" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Github\EscapeRoomsRecSys\recsys" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="R:\Github\EscapeRoomsRecSys\recsys\CleaningAlgorithms" />
       <recent name="C:\Github\EscapeRoomsRecSys\recsys" />
       <recent name="R:\Github\EscapeRoomsRecSys\resources" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="R:\Github\EscapeRoomsRecSys\recsys\CleaningAlgorithms" />
+      <recent name="C:\Github\EscapeRoomsRecSys\recsys" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -323,8 +334,25 @@
     </option>
   </component>
   <component name="RunManager" selected="Python tests.Unittests in test_top_n.py">
-    <configuration name="top_n_algorithms" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="test_top_n" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="EscapeRoomsRecSys" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test_top_n.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="top_n_algorithms" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -335,87 +363,74 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="EscapeRoomsRecSys" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/recsys/top_n_algorithms.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
     </configuration>
     <configuration name="Unittests for test_runner.TestRecSysMethods.test_all_algorithms" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="EscapeRoomsRecSys" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs />
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="EscapeRoomsRecSys" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test_runner.TestRecSysMethods.test_all_algorithms&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests for test_top_n.TestRecSysMethods.test_print_test_a" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="EscapeRoomsRecSys" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_top_n.TestRecSysMethods.test_print_test_a&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
     </configuration>
     <configuration name="Unittests for test_top_n.TestRecSysMethods.test_top_n_algorithms" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="EscapeRoomsRecSys" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs />
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="EscapeRoomsRecSys" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test_top_n.TestRecSysMethods.test_top_n_algorithms&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
     </configuration>
     <configuration name="Unittests in test_top_n.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="EscapeRoomsRecSys" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs />
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="EscapeRoomsRecSys" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;$PROJECT_DIR$/test/test_top_n.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="Python tests.Unittests for test_runner.TestRecSysMethods.test_all_algorithms" />
-      <item itemvalue="Python tests.Unittests for test_top_n.TestRecSysMethods.test_print_test_a" />
-      <item itemvalue="Python.top_n_algorithms" />
-      <item itemvalue="Python tests.Unittests for test_top_n.TestRecSysMethods.test_top_n_algorithms" />
-      <item itemvalue="Python tests.Unittests in test_top_n.py" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in test_top_n.py" />
+      <item index="1" class="java.lang.String" itemvalue="Python.top_n_algorithms" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for test_top_n.TestRecSysMethods.test_top_n_algorithms" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests for test_runner.TestRecSysMethods.test_all_algorithms" />
+      <item index="4" class="java.lang.String" itemvalue="Python.test_top_n" />
     </list>
     <recent_temporary>
-      <list>
-        <item itemvalue="Python tests.Unittests in test_top_n.py" />
-        <item itemvalue="Python tests.Unittests for test_top_n.TestRecSysMethods.test_top_n_algorithms" />
-        <item itemvalue="Python.top_n_algorithms" />
-        <item itemvalue="Python tests.Unittests for test_top_n.TestRecSysMethods.test_print_test_a" />
-        <item itemvalue="Python tests.Unittests for test_runner.TestRecSysMethods.test_all_algorithms" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in test_top_n.py" />
+        <item index="1" class="java.lang.String" itemvalue="Python.test_top_n" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for test_runner.TestRecSysMethods.test_all_algorithms" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests for test_top_n.TestRecSysMethods.test_top_n_algorithms" />
+        <item index="4" class="java.lang.String" itemvalue="Python.top_n_algorithms" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -431,34 +446,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_test_top_n_py - 2018.10.08 at 20h 39m 10s.xml">
+    <history-entry file="Unittests_in_test_top_n_py - 2018.10.12 at 11h 42m 55s.xml">
       <configuration name="Unittests in test_top_n.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_top_n_py - 2018.10.08 at 20h 39m 52s.xml">
+    <history-entry file="Unittests_in_test_top_n_py - 2018.10.13 at 23h 57m 45s.xml">
       <configuration name="Unittests in test_top_n.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_top_n_py - 2018.10.08 at 20h 47m 21s.xml">
+    <history-entry file="Unittests_in_test_top_n_py - 2018.10.14 at 00h 00m 52s.xml">
       <configuration name="Unittests in test_top_n.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_top_n_py - 2018.10.08 at 20h 49m 59s.xml">
+    <history-entry file="Unittests_in_test_top_n_py - 2018.10.14 at 00h 02m 22s.xml">
       <configuration name="Unittests in test_top_n.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_top_n_py - 2018.10.08 at 20h 55m 21s.xml">
+    <history-entry file="Unittests_in_test_top_n_py - 2018.10.14 at 00h 08m 04s.xml">
       <configuration name="Unittests in test_top_n.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_top_n_py - 2018.10.08 at 21h 07m 44s.xml">
+    <history-entry file="Unittests_in_test_top_n_py - 2018.10.14 at 00h 13m 49s.xml">
       <configuration name="Unittests in test_top_n.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_top_n_py - 2018.10.08 at 21h 15m 18s.xml">
+    <history-entry file="Unittests_in_test_top_n_py - 2018.10.14 at 00h 16m 41s.xml">
       <configuration name="Unittests in test_top_n.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_top_n_py - 2018.10.08 at 21h 18m 43s.xml">
+    <history-entry file="Unittests_in_test_top_n_py - 2018.10.14 at 00h 19m 49s.xml">
       <configuration name="Unittests in test_top_n.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_top_n_py - 2018.10.08 at 21h 29m 26s.xml">
+    <history-entry file="Unittests_in_test_top_n_py - 2018.10.14 at 00h 23m 48s.xml">
       <configuration name="Unittests in test_top_n.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_top_n_py - 2018.10.08 at 22h 27m 51s.xml">
+    <history-entry file="Unittests_in_test_top_n_py - 2018.10.14 at 00h 50m 16s.xml">
       <configuration name="Unittests in test_top_n.py" configurationId="tests" />
     </history-entry>
   </component>
@@ -474,23 +489,23 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13382508" />
-      <window_info id="Structure" order="1" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32853982" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2516269" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.329718" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32853982" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Python Console" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11643836" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38586956" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3576087" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -500,11 +515,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test/test_runner.py</url>
-          <line>94</line>
-          <option name="timeStamp" value="96" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/recsys/esc_room_rec_sys.py</url>
           <option name="timeStamp" value="155" />
         </line-breakpoint>
@@ -512,6 +522,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
+      <option name="time" value="26" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="tests">
@@ -529,247 +540,163 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/test_recommendation.py" />
-    <entry file="file://R:/Anaconda3/Lib/unittest/main.py" />
-    <entry file="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/-1789782354/surprise/prediction_algorithms/matrix_factorization.py" />
-    <entry file="file://R:/Anaconda3/Lib/site-packages/surprise/accuracy.py" />
-    <entry file="file://R:/Anaconda3/Lib/site-packages/pandas/core/frame.py" />
-    <entry file="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/-1789782354/surprise/similarities.py" />
-    <entry file="file://R:/Anaconda3/Lib/site-packages/surprise/prediction_algorithms/knns.py" />
-    <entry file="file://R:/Anaconda3/Lib/site-packages/surprise/prediction_algorithms/algo_base.py" />
-    <entry file="file://R:/Anaconda3/Lib/unittest/case.py" />
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/surprise/prediction_algorithms/predictions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/tables/tests/test_array.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="2011" column="8" selection-start-line="2011" selection-start-column="8" selection-end-line="2011" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/surprise/accuracy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/dataset_8-9-2018_train.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/aggregated/train.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="30" selection-start-column="21" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/surprise/reader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="60" column="35" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/surprise/accuracy.py" />
+    <entry file="file://$PROJECT_DIR$/resources/aggregated/train.csv" />
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/surprise/reader.py" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/teamcity/common.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/dataset_8-9-2018_test.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="64" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="64" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/pandas/core/groupby.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="2132" selection-start-line="2132" selection-end-line="2132" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/pandas/core/series.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5">
-          <caret line="1143" selection-start-line="1143" selection-end-line="1143" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/unittest/loader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="162" selection-start-line="162" selection-end-line="162" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2018.2/system/python_stubs/402946791/surprise/prediction_algorithms/matrix_factorization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9163">
-          <caret line="541" column="59" selection-start-line="541" selection-start-column="59" selection-end-line="541" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/surprise/dataset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4199">
-          <caret line="262" selection-start-line="262" selection-end-line="262" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/pandas/core/frame.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77418">
-          <caret line="4644" selection-start-line="4644" selection-end-line="4644" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/ntpath.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5219">
-          <caret line="311" selection-start-line="311" selection-end-line="311" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/surprise/model_selection/split.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7157">
-          <caret line="433" selection-start-line="433" selection-end-line="433" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/pandas/core/groupby.py" />
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/pandas/core/series.py" />
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/unittest/loader.py" />
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.2/system/python_stubs/402946791/surprise/prediction_algorithms/matrix_factorization.py" />
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/surprise/dataset.py" />
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/pandas/core/frame.py" />
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/ntpath.py" />
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/surprise/model_selection/split.py" />
     <entry file="file://$PROJECT_DIR$/recsys/k_markov_recsys.py" />
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/IPython/core/interactiveshell.py">
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/IPython/core/interactiveshell.py" />
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/surprise/model_selection/validation.py" />
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/numpy/core/arrayprint.py" />
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/surprise/trainset.py" />
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/numpy/core/numeric.py" />
+    <entry file="file://$PROJECT_DIR$/test/test_runner.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="2880" selection-start-line="2880" selection-end-line="2880" />
+        <state relative-caret-position="306">
+          <caret line="27" column="31" lean-forward="false" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/dateutil/parser.py" />
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/surprise/prediction_algorithms/knns.py" />
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/surprise/prediction_algorithms/algo_base.py" />
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/numpy/core/fromnumeric.py" />
+    <entry file="file://$PROJECT_DIR$/recsys/k_markov_new.py" />
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/surprise/prediction_algorithms/baseline_only.py" />
+    <entry file="file://$PROJECT_DIR$/test/test_runner_project_2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-591">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="5" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/unittest/case.py" />
+    <entry file="file://R:/Anaconda3/Lib/site-packages/surprise/prediction_algorithms/predictions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="43" column="34" lean-forward="false" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test_manual_runner.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="1" column="37" lean-forward="true" selection-start-line="1" selection-start-column="37" selection-end-line="1" selection-end-column="37" />
+        <state relative-caret-position="0">
+          <caret line="1" column="37" lean-forward="false" selection-start-line="1" selection-start-column="37" selection-end-line="1" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/surprise/model_selection/validation.py">
+    <entry file="file://$PROJECT_DIR$/recsys/KMarkovClusters.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+        <state relative-caret-position="261">
+          <caret line="28" column="52" lean-forward="true" selection-start-line="28" selection-start-column="52" selection-end-line="28" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/numpy/core/arrayprint.py">
+    <entry file="file://R:/Anaconda3/Lib/site-packages/surprise/prediction_algorithms/knns.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="463" selection-start-line="463" selection-end-line="463" />
+        <state relative-caret-position="205">
+          <caret line="31" column="22" lean-forward="false" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/surprise/trainset.py">
+    <entry file="file://R:/Anaconda3/Lib/site-packages/surprise/prediction_algorithms/algo_base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="260" selection-start-line="260" selection-end-line="260" />
+        <state relative-caret-position="540">
+          <caret line="30" column="8" lean-forward="false" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/numpy/core/numeric.py">
+    <entry file="file://R:/Anaconda3/Lib/unittest/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="1960" selection-start-line="1960" selection-end-line="1960" />
+        <state relative-caret-position="3645">
+          <caret line="140" column="0" lean-forward="false" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_runner.py">
+    <entry file="file://R:/Anaconda3/Lib/unittest/loader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+        <state relative-caret-position="4104">
+          <caret line="162" column="0" lean-forward="false" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/tmp/results2.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://R:/Anaconda3/Lib/site-packages/surprise/prediction_algorithms/baseline_only.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="35" column="42" lean-forward="false" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/-1789782354/surprise/prediction_algorithms/matrix_factorization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14553">
+          <caret line="541" column="8" lean-forward="false" selection-start-line="541" selection-start-column="8" selection-end-line="541" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recsys/KMarkovSim.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-104">
+          <caret line="24" column="25" lean-forward="false" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recsys/KMarkov.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recsys/KMarkovLatest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="729">
+          <caret line="27" column="44" lean-forward="false" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <marker date="1538766108271" expanded="true" signature="1339:1448" ph="..." />
+            <element signature="e#0#16#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/dateutil/parser.py">
+    <entry file="file://$PROJECT_DIR$/recsys/SurpriseTopN.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="382" selection-start-line="382" selection-end-line="382" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/surprise/prediction_algorithms/knns.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1">
-          <caret line="81" column="52" selection-start-line="81" selection-start-column="52" selection-end-line="81" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/surprise/prediction_algorithms/algo_base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-28">
-          <caret line="264" column="8" selection-start-line="264" selection-start-column="8" selection-end-line="264" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/numpy/core/fromnumeric.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41">
-          <caret line="825" column="4" selection-start-line="825" selection-start-column="4" selection-end-line="825" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recsys/k_markov_new.py" />
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/surprise/prediction_algorithms/baseline_only.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="35" column="40" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_runner_project_2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-591">
-          <caret line="3" selection-start-line="3" selection-end-line="5" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/unittest/case.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="600" selection-start-line="600" selection-end-line="600" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recsys/top_n_algorithms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
-          <folding>
-            <marker date="1539020619868" expanded="true" signature="17:18" ph="..." />
-            <marker date="1539020619868" expanded="true" signature="17:19" ph="..." />
-            <marker date="1539020619868" expanded="true" signature="42:61" ph="..." />
-            <marker date="1539020619868" expanded="true" signature="98:117" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recsys/MyMediaLiteTopN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="189">
+          <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
           </folding>
@@ -778,69 +705,75 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/recsys/esc_room_rec_sys.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1224">
-          <caret line="84" column="57" selection-start-line="84" selection-start-column="57" selection-end-line="84" selection-end-column="57" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <marker date="1538766686665" expanded="true" signature="1174:1179" ph="..." />
-          </folding>
+        <state relative-caret-position="2619">
+          <caret line="109" column="0" lean-forward="false" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/recsys/KMarkovSim.py">
+    <entry file="file://$PROJECT_DIR$/recsys/top_n_algorithms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+        <state relative-caret-position="135">
+          <caret line="5" column="27" lean-forward="false" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/recsys/KMarkovClusters.py">
+    <entry file="file://R:/Anaconda3/Lib/unittest/case.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1445">
-          <caret line="92" column="47" selection-start-line="92" selection-start-column="47" selection-end-line="92" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="242">
+          <caret line="604" column="0" lean-forward="false" selection-start-line="604" selection-start-column="0" selection-end-line="604" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/recsys/KMarkovLatest.py">
+    <entry file="file://$PROJECT_DIR$/recsys/MyMediaLiteTopN.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-408">
-          <caret line="57" column="29" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="270">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/recsys/KMarkov.py">
+    <entry file="file://$PROJECT_DIR$/recsys/CleaningAlgorithms/CleanFakeUsersRankedOneItem.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="39" column="80" lean-forward="true" selection-start-line="39" selection-start-column="80" selection-end-line="39" selection-end-column="80" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="81">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recsys/CleaningAlgorithms/CleanFakeUsersNoClean.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recsys/CleaningAlgorithms/CleanFakeUsers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recsys/CleaningAlgorithms/CleanFakeUsersRankedOnly10.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test_top_n.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1">
-          <caret line="30" column="48" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
+        <state relative-caret-position="31">
+          <caret line="52" column="13" lean-forward="false" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
-            <marker date="1539026634949" expanded="true" signature="425:6599" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recsys/SurpriseTopN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
+            <element signature="e#8325#9535#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -15,24 +15,17 @@ class KMarkovLatest(TopNRecsys):
         self.dict_count_k_m_1 = {}
         self.train_set = None
 
-    def fit(self, train_set, clean_fake):
+    def fit(self, train_set):
 
         self.train_set = train_set
 
-        if clean_fake:
-            user_ratings = train_set.groupby('userID')['itemID'].apply(list)
-            fake_users = user_ratings[user_ratings.apply(lambda x: len(x) <= 1)]
-            train_set_filtered = train_set[~train_set['userID'].isin(fake_users.keys().tolist())]
-        else:
-            train_set_filtered = train_set
-
         count = 0
-        pbar = tqdm(total=len(train_set_filtered.userID.unique()))
-        for userID in train_set_filtered.userID.unique():
+        pbar = tqdm(total=len(self.train_set.userID.unique()))
+        for userID in self.train_set.userID.unique():
             pbar.update(1)
             count += 1
 
-            df_user_ratings = train_set_filtered[train_set_filtered.userID == userID]
+            df_user_ratings = self.train_set[self.train_set.userID == userID]
             df_user_ratings.sort_values('timestamp')
             grouped_by_time = df_user_ratings.groupby('timestamp')['itemID'].apply(list)
             grouped_items = [x for x in grouped_by_time]

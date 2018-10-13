@@ -15,11 +15,8 @@ class SurpriseRecMethod(TopNRecsys):
     def __init__(self, method):
         self.method = method
 
-    def fit(self, train_set, clean_fake):
-        if clean_fake:
-            user_ratings = train_set.groupby('userID')['itemID'].apply(list)
-            fake_users = user_ratings[user_ratings.apply(lambda x: len(x) <= 1)]
-            train_set = train_set[~train_set['userID'].isin(fake_users.keys().tolist())]
+    def fit(self, train_set):
+
         self.train_set = train_set
 
     def get_top_n_recommendations(self, test_set, top_n):
@@ -63,4 +60,3 @@ class SurpriseRecMethod(TopNRecsys):
             recommendations[str(userID)] = user_recommendations
         pbar.close()
         return recommendations
-
