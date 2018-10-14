@@ -1,0 +1,7 @@
+,alg,AUC,prec@5,prec@10,MAP,recall@5,recall@10,NDCG,MRR,filled_with_popular,clean_fake_method
+0,K-markov-latest(k=2)TrueNo Clean,0.53234,0.0087,0.00942,0.00886,0.01524,0.03393,0.01794,0.02387,True,No Clean
+1,K-markov-latest(k=2)TrueRanked 1 Item,0.53231,0.00812,0.00942,0.01193,0.01762,0.03393,0.01986,0.02143,True,Ranked 1 Item
+2,K-markov-latest(k=2)TrueRanked Only 10,0.53243,0.01043,0.00942,0.01391,0.02139,0.03393,0.0218,0.02558,True,Ranked Only 10
+3,K-markov-latest(k=2)FalseNo Clean,0.51989,0.00696,0.00638,0.00609,0.0098,0.0161,0.01111,0.0183,False,No Clean
+4,K-markov-latest(k=2)FalseRanked 1 Item,0.5199,0.00609,0.00638,0.00382,0.0078,0.0161,0.00911,0.01326,False,Ranked 1 Item
+5,K-markov-latest(k=2)FalseRanked Only 10,0.51993,0.00638,0.00638,0.00617,0.01012,0.0161,0.01097,0.01657,False,Ranked Only 10

@@ -18,41 +18,41 @@ class TestRecSysMethods(unittest.TestCase):
 
     def reset_algs(self):
         rec_sys_algs = {
-            "(Surprise) SVD (base model)": SurpriseTopN.SurpriseRecMethod(SVD()),
-            "(Surprise) SVD++": SurpriseTopN.SurpriseRecMethod(SVDpp()),
-            "(Surprise) NMF": SurpriseTopN.SurpriseRecMethod(NMF()),
-            "(Surprise) SlopeOne": SurpriseTopN.SurpriseRecMethod(SlopeOne()),
-            "(Surprise) KNNBaseline": SurpriseTopN.SurpriseRecMethod(KNNBaseline()),
-            "(Surprise) KNNBasic cosine user min = 1": SurpriseTopN.SurpriseRecMethod(KNNBasic(sim_options={'name': 'cosine', 'user_based': True})),
-            "(Surprise) KNNBasic pearson user": SurpriseTopN.SurpriseRecMethod(KNNBasic(sim_options={'name': 'pearson_baseline', 'user_based': True})),
-            "(Surprise) KNNBasic cosine item": SurpriseTopN.SurpriseRecMethod(KNNBasic(sim_options={'name': 'cosine', 'user_based': False})),
-            "(Surprise) KNNBasic pearson item": SurpriseTopN.SurpriseRecMethod(KNNBasic(sim_options={'name': 'pearson_baseline', 'user_based': False})),
-            "(Surprise) KNNWithMeans": SurpriseTopN.SurpriseRecMethod(KNNWithMeans()),
-            "(Surprise) KNNWithZScore": SurpriseTopN.SurpriseRecMethod(KNNWithZScore()),
-            "(Surprise) CoClustering": SurpriseTopN.SurpriseRecMethod(CoClustering()),
-            "(Surprise) BaselineOnly": SurpriseTopN.SurpriseRecMethod(BaselineOnly()),
-            "(Surprise) NormalPredictor": SurpriseTopN.SurpriseRecMethod(NormalPredictor()),
+            #"(Surprise) SVD (base model)": SurpriseTopN.SurpriseRecMethod(SVD()),
+            #"(Surprise) SVD++": SurpriseTopN.SurpriseRecMethod(SVDpp()),
+            #"(Surprise) NMF": SurpriseTopN.SurpriseRecMethod(NMF()),
+            #"(Surprise) SlopeOne": SurpriseTopN.SurpriseRecMethod(SlopeOne()),
+            #"(Surprise) KNNBaseline": SurpriseTopN.SurpriseRecMethod(KNNBaseline()),
+            #?"(Surprise) KNNBasic cosine user min = 1": SurpriseTopN.SurpriseRecMethod(KNNBasic(sim_options={'name': 'cosine', 'user_based': True})),
+            #?"(Surprise) KNNBasic pearson user": SurpriseTopN.SurpriseRecMethod(KNNBasic(sim_options={'name': 'pearson_baseline', 'user_based': True})),
+            #"(Surprise) KNNBasic cosine item": SurpriseTopN.SurpriseRecMethod(KNNBasic(sim_options={'name': 'cosine', 'user_based': False})),
+            #"(Surprise) KNNBasic pearson item": SurpriseTopN.SurpriseRecMethod(KNNBasic(sim_options={'name': 'pearson_baseline', 'user_based': False})),
+            #"(Surprise) KNNWithMeans": SurpriseTopN.SurpriseRecMethod(KNNWithMeans()),
+            #"(Surprise) KNNWithZScore": SurpriseTopN.SurpriseRecMethod(KNNWithZScore()),
+            #"(Surprise) CoClustering": SurpriseTopN.SurpriseRecMethod(CoClustering()),
+            #"(Surprise) BaselineOnly": SurpriseTopN.SurpriseRecMethod(BaselineOnly()),
+            #"(Surprise) NormalPredictor": SurpriseTopN.SurpriseRecMethod(NormalPredictor()),
             #
-             "(MyMediaLite) UserKNN": MyMediaLiteTopN.MyMdediaLiteRecMethod('UserKNN', 'correlation=Pearson'),
-             "(MyMediaLite) BPRMF": MyMediaLiteTopN.MyMdediaLiteRecMethod('BPRMF', ''),
-             "(MyMediaLite) ItemAttributeKNN ": MyMediaLiteTopN.MyMdediaLiteRecMethod('ItemAttributeKNN ', ''),
-             "(MyMediaLite) ItemKNN": MyMediaLiteTopN.MyMdediaLiteRecMethod('ItemKNN', ''),
-             "(MyMediaLite) MostPopular": MyMediaLiteTopN.MyMdediaLiteRecMethod('MostPopular', ''),
-             "(MyMediaLite) Random": MyMediaLiteTopN.MyMdediaLiteRecMethod('Random', ''),
-             "(MyMediaLite) UserAttributeKNN": MyMediaLiteTopN.MyMdediaLiteRecMethod('UserAttributeKNN', ''),
-             "(MyMediaLite) WRMF": MyMediaLiteTopN.MyMdediaLiteRecMethod('WRMF', ''),
-             "(MyMediaLite) Zero": MyMediaLiteTopN.MyMdediaLiteRecMethod('Zero', ''),
-             "(MyMediaLite) MultiCoreBPRMF ": MyMediaLiteTopN.MyMdediaLiteRecMethod('MultiCoreBPRMF', ''),
-             "(MyMediaLite) SoftMarginRankingMF": MyMediaLiteTopN.MyMdediaLiteRecMethod('SoftMarginRankingMF', ''),
-             "(MyMediaLite) WeightedBPRMF": MyMediaLiteTopN.MyMdediaLiteRecMethod('WeightedBPRMF', ''),
-             "(MyMediaLite) MostPopularByAttributes": MyMediaLiteTopN.MyMdediaLiteRecMethod('MostPopularByAttributes', ''),
-             "(MyMediaLite) BPRSLIM": MyMediaLiteTopN.MyMdediaLiteRecMethod('BPRSLIM', ''),
+             #"(MyMediaLite) UserKNN": MyMediaLiteTopN.MyMdediaLiteRecMethod('UserKNN', 'correlation=Pearson'),
+             #"(MyMediaLite) BPRMF": MyMediaLiteTopN.MyMdediaLiteRecMethod('BPRMF', ''),
+             #"(MyMediaLite) ItemAttributeKNN ": MyMediaLiteTopN.MyMdediaLiteRecMethod('ItemAttributeKNN ', ''),
+             #"(MyMediaLite) ItemKNN": MyMediaLiteTopN.MyMdediaLiteRecMethod('ItemKNN', ''),
+             #"(MyMediaLite) MostPopular": MyMediaLiteTopN.MyMdediaLiteRecMethod('MostPopular', ''),
+             #"(MyMediaLite) Random": MyMediaLiteTopN.MyMdediaLiteRecMethod('Random', ''),
+             #"(MyMediaLite) UserAttributeKNN": MyMediaLiteTopN.MyMdediaLiteRecMethod('UserAttributeKNN', ''),
+             #"(MyMediaLite) WRMF": MyMediaLiteTopN.MyMdediaLiteRecMethod('WRMF', ''),
+             #"(MyMediaLite) Zero": MyMediaLiteTopN.MyMdediaLiteRecMethod('Zero', ''),
+             #"(MyMediaLite) MultiCoreBPRMF ": MyMediaLiteTopN.MyMdediaLiteRecMethod('MultiCoreBPRMF', ''),
+             #"(MyMediaLite) SoftMarginRankingMF": MyMediaLiteTopN.MyMdediaLiteRecMethod('SoftMarginRankingMF', ''),
+             #"(MyMediaLite) WeightedBPRMF": MyMediaLiteTopN.MyMdediaLiteRecMethod('WeightedBPRMF', ''),
+             #"(MyMediaLite) MostPopularByAttributes": MyMediaLiteTopN.MyMdediaLiteRecMethod('MostPopularByAttributes', ''),
+             #"(MyMediaLite) BPRSLIM": MyMediaLiteTopN.MyMdediaLiteRecMethod('BPRSLIM', ''),
 
             # "K-markov(k=1)": KMarkov.k_markov_rc(k=1),
-            "K-markov(k=2)": KMarkov.k_markov_rc(k=2),
-             "K-markov(k=3)": KMarkov.k_markov_rc(k=3),
+             #"K-markov(k=2)": KMarkov.k_markov_rc(k=2),
+             #"K-markov(k=3)": KMarkov.k_markov_rc(k=3),
             # "K-markov(k=4)": KMarkov.k_markov_rc(k=4),
-             "K-markov-latest(k=2)": KMarkovLatest.KMarkovLatest(k=2),
+            # "K-markov-latest(k=2)": KMarkovLatest.KMarkovLatest(k=2),
             # "K-markov-similarity":  KMarkovSim.k_markov_rc_user_similarity(k=2),
             # "K-markov-clustered": KMarkovClusters.k_markov_clusters(k=2, clusters=3)
         }
@@ -60,10 +60,10 @@ class TestRecSysMethods(unittest.TestCase):
 
     def test_top_n_algorithms(self):
 
-        train_set_path = '..//resources//aggregated//train_numerized.csv'
-        test_set_path = '..//resources//aggregated//test_numerized.csv'
-        train_set = pd.read_csv(train_set_path, parse_dates=[3])
-        test_set = pd.read_csv(test_set_path, parse_dates=[3])
+        train_set_path = '..//resources//aggregated//train_numerized_with_anon.csv'
+        test_set_path = '..//resources//aggregated//test_numerized_with_anon.csv'
+        train_set = pd.read_csv(train_set_path, parse_dates=[3], index_col='index')
+        test_set = pd.read_csv(test_set_path, parse_dates=[3], index_col='index')
 
         #if clean_fake:
         #    user_ratings = train_set.groupby('userID')['itemID'].apply(list)
@@ -76,7 +76,10 @@ class TestRecSysMethods(unittest.TestCase):
                               CleanFakeUsersRankedOne(),
                               CleanFakeUsersRankedOnlyTen()
                               ]
-        fill_with_popular = [True, False]
+        fill_with_popular = [
+            True,
+            False
+        ]
 
         if fill_with_popular:
             # train most popular for default
@@ -141,37 +144,3 @@ class TestRecSysMethods(unittest.TestCase):
                             ignore_index=True)
 
         return df_stats
-
-
-    def numerize_data(self):
-
-        # Datasets
-
-        train_set = '..//resources//aggregated//train.csv'
-        test_set = '..//resources//aggregated//test.csv'
-
-        train_set = pd.read_csv(train_set, parse_dates=[3])
-        test_set = pd.read_csv(test_set, parse_dates=[3])
-
-        item_to_id_mapping = {}
-        user_to_id_mapping = {}
-
-        item_index = 0
-        user_index = 0
-        all_sets = pd.concat([train_set, test_set])
-        for item in all_sets['itemID']:
-            if item not in item_to_id_mapping.keys():
-                item_to_id_mapping[item] = item_index
-                item_index += 1
-        for user in all_sets['userID']:
-            if user not in user_to_id_mapping.keys():
-                user_to_id_mapping[user] = user_index
-                user_index += 1
-
-        train_set['itemID'] = train_set['itemID'].map(item_to_id_mapping)
-        test_set['itemID'] = test_set['itemID'].map(item_to_id_mapping)
-        train_set['userID'] = train_set['userID'].map(user_to_id_mapping)
-        test_set['userID'] = test_set['userID'].map(user_to_id_mapping)
-
-        train_set.to_csv('..//resources//aggregated/train_numerized.csv')
-        test_set.to_csv('..//resources//aggregated/test_numerized.csv')
