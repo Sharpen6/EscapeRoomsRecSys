@@ -1,0 +1,7 @@
+,Algorithm,Filled with pop,Clean fake method,RMSE
+0,(Surprise) SVD (base model),True,No Clean,FAILED
+1,(Surprise) SVD (base model),True,Ranked 1 Item,FAILED
+2,(Surprise) SVD (base model),True,Ranked Only 10,FAILED
+3,(Surprise) SVD (base model),False,No Clean,FAILED
+4,(Surprise) SVD (base model),False,Ranked 1 Item,FAILED
+5,(Surprise) SVD (base model),False,Ranked Only 10,FAILED

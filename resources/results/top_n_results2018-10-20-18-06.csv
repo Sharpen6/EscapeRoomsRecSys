@@ -1,0 +1,2 @@
+,alg,AUC,prec@5,prec@10,MAP,recall@5,recall@10,NDCG,MRR,filled_with_popular,clean_fake_method
+0,K-markov(k=2)TrueRanked Only 10,0.52892,0.01188,0.01145,0.01019,0.01583,0.02736,0.0184,0.02425,True,Ranked Only 10

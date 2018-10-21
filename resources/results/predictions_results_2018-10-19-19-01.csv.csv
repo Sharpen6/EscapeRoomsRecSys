@@ -1,0 +1,16 @@
+,Algorithm,Filled with pop,Clean fake method,RMSE
+0,(Surprise) KNNBasic pearson item,False,No Clean,1.5778039022549117
+1,(Surprise) SVD (base model),False,No Clean,1.5778039022549117
+2,(Surprise) SVD++,False,No Clean,1.5778039022549117
+3,(Surprise) NMF,False,No Clean,1.5778039022549117
+4,(Surprise) SlopeOne,False,No Clean,1.5778039022549117
+5,(Surprise) KNNBasic pearson item,False,Ranked 1 Item,1.984951489309212
+6,(Surprise) SVD (base model),False,Ranked 1 Item,1.984951489309212
+7,(Surprise) SVD++,False,Ranked 1 Item,1.984951489309212
+8,(Surprise) NMF,False,Ranked 1 Item,1.984951489309212
+9,(Surprise) SlopeOne,False,Ranked 1 Item,1.984951489309212
+10,(Surprise) KNNBasic pearson item,False,Ranked Only 10,1.984951489309212
+11,(Surprise) SVD (base model),False,Ranked Only 10,1.984951489309212
+12,(Surprise) SVD++,False,Ranked Only 10,1.984951489309212
+13,(Surprise) NMF,False,Ranked Only 10,1.984951489309212
+14,(Surprise) SlopeOne,False,Ranked Only 10,1.984951489309212

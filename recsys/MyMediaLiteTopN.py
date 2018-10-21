@@ -10,6 +10,7 @@ from surprise.model_selection import PredefinedKFold
 from surprise.prediction_algorithms import *
 from top_n_algorithms import TopNRecsys
 
+
 class MyMdediaLiteRecMethod(TopNRecsys):
 
     def __init__(self, method, params):
@@ -34,7 +35,6 @@ class MyMdediaLiteRecMethod(TopNRecsys):
 
         self.train_set.to_csv(train_path_tmp, index=False, header=False)
 
-
         recommender_arg = '--recommender={}'.format(self.method)
         train_path_arg = '--training-file={}'.format(train_path_tmp)
         output_path_arg = '--prediction-file={}'.format(output_path_tmp)
@@ -44,12 +44,13 @@ class MyMdediaLiteRecMethod(TopNRecsys):
         if self.params != '':
             options = '--recommender-options={}'.format(self.params)
 
-        exe_line = ".\..\MyMediaLite\item_recommendation.exe  --no-id-mapping --file-format=ignore_first_line" \
-                                                       " {} {} {} {} {}".format(recommender_arg,
-                                                                             train_path_arg,
-                                                                             test_users_arg,
-                                                                             output_path_arg,
-                                                                             options)
+        exe_line = ".\..\MyMediaLite\\item_recommendation.exe  --predict-items-number=10" \
+                   " --file-format=ignore_first_line" \
+                   " {} {} {} {} {}".format(recommender_arg,
+                                            train_path_arg,
+                                            test_users_arg,
+                                            output_path_arg,
+                                            options)
 
         os.system(exe_line)
 
@@ -72,5 +73,5 @@ class MyMdediaLiteRecMethod(TopNRecsys):
                 if len(rec_for_user) == 0:
                     count_skipped += 1
                 user_recommendations[user_id] = rec_for_user
-            print('skipped: ' + str(count_skipped) + '/' + str(count))
+            #print('skipped: ' + str(count_skipped) + '/' + str(count))
         return user_recommendations

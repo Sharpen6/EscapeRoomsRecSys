@@ -16,16 +16,16 @@ class k_markov_rc(TopNRecsys):
 
         self.train_set = train_set
 
-        count = 0
         pbar = tqdm(total=len(self.train_set.userID.unique()))
         for userID in self.train_set.userID.unique():
             pbar.update(1)
-            count += 1
-
             df_user_ratings = self.train_set[self.train_set.userID == userID]
-            df_user_ratings.sort_values('timestamp')
-            grouped_by_time = df_user_ratings.groupby('timestamp')['itemID'].apply(list)
-            grouped_items = [x for x in grouped_by_time]
+
+            grouped_by_time = df_user_ratings.groupby('timestamp')['itemID'].apply(list).reset_index()
+            grouped_by_time['timestamp'] = grouped_by_time['timestamp'].astype('datetime64[ns]')
+            grouped_by_time = grouped_by_time.sort_values(by='timestamp')
+            grouped_by_time = grouped_by_time.set_index('timestamp')
+            grouped_items = [val.tolist()[0] for key, val in grouped_by_time.iterrows()]
 
             if len(grouped_items) <= self.k - 1:
                 continue
@@ -43,7 +43,8 @@ class k_markov_rc(TopNRecsys):
                     if k not in self.dict_count_k_m_1:
                         self.dict_count_k_m_1[k] = 0
                     self.dict_count_k_m_1[k] += 1
-            pass
+
+
         pbar.close()
         print('Done fitting')
 
@@ -70,9 +71,11 @@ class k_markov_rc(TopNRecsys):
 
             df_user_previous_ratings = self.train_set[self.train_set.userID == userID]
 
-            df_user_previous_ratings.sort_values('timestamp')
-            grouped_by_time = df_user_previous_ratings.groupby('timestamp')['itemID'].apply(list)
-            grouped_items = [x for x in grouped_by_time]
+            grouped_by_time = df_user_previous_ratings.groupby('timestamp')['itemID'].apply(list).reset_index()
+            grouped_by_time['timestamp'] = grouped_by_time['timestamp'].astype('datetime64[ns]')
+            grouped_by_time = grouped_by_time.sort_values(by='timestamp')
+            grouped_by_time = grouped_by_time.set_index('timestamp')
+            grouped_items = [val.tolist()[0] for key, val in grouped_by_time.iterrows()]
 
             combinations = list(itertools.combinations(grouped_items, r=self.k - 1))
 

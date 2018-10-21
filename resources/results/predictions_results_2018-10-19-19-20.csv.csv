@@ -1,0 +1,15 @@
+,Algorithm,Filled with pop,Clean fake method,RMSE
+0,(Surprise) KNNBasic pearson item,False,Ranked Only 10,1.8803341197629997
+1,(Surprise) SVD (base model),False,Ranked Only 10,1.856479301549753
+2,(Surprise) SVD++,False,Ranked Only 10,1.8829181806978743
+3,(Surprise) NMF,False,Ranked Only 10,2.4948894279503735
+4,(Surprise) SlopeOne,False,Ranked Only 10,1.8597502489997901
+5,(Surprise) KNNBaseline,False,Ranked Only 10,1.8044605276331376
+6,(Surprise) KNNBasic cosine user min = 1,False,Ranked Only 10,1.895999370849727
+7,(Surprise) KNNBasic pearson user,False,Ranked Only 10,1.8865728749024422
+8,(Surprise) KNNBasic cosine item,False,Ranked Only 10,1.9372238654064124
+9,(Surprise) KNNWithMeans,False,Ranked Only 10,1.8562610334517027
+10,(Surprise) KNNWithZScore,False,Ranked Only 10,1.841798148927792
+11,(Surprise) CoClustering,False,Ranked Only 10,1.8595323648388877
+12,(Surprise) BaselineOnly,False,Ranked Only 10,1.8472898366744492
+13,(Surprise) NormalPredictor,False,Ranked Only 10,2.895953696451916

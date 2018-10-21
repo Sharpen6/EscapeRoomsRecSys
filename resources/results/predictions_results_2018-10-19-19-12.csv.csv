@@ -1,0 +1,3 @@
+,Algorithm,Filled with pop,Clean fake method,RMSE
+0,(Surprise) KNNBaseline,False,Ranked Only 10,1.984951489309212
+1,(Surprise) KNNBasic cosine user min = 1,False,Ranked Only 10,1.984951489309212

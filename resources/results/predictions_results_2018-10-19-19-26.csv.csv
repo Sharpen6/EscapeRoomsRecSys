@@ -1,0 +1,85 @@
+,Algorithm,Filled with pop,Clean fake method,RMSE
+0,(Surprise) KNNBasic pearson item,True,No Clean,1.4532141763909177
+1,(Surprise) SVD (base model),True,No Clean,1.4565561835100052
+2,(Surprise) SVD++,True,No Clean,1.4329984657763393
+3,(Surprise) NMF,True,No Clean,2.767459676889453
+4,(Surprise) SlopeOne,True,No Clean,1.4546076124924232
+5,(Surprise) KNNBaseline,True,No Clean,1.3925595291187318
+6,(Surprise) KNNBasic cosine user min = 1,True,No Clean,FAILED
+7,(Surprise) KNNBasic pearson user,True,No Clean,FAILED
+8,(Surprise) KNNBasic cosine item,True,No Clean,1.5388012341591082
+9,(Surprise) KNNWithMeans,True,No Clean,FAILED
+10,(Surprise) KNNWithZScore,True,No Clean,FAILED
+11,(Surprise) CoClustering,True,No Clean,1.4720518981760884
+12,(Surprise) BaselineOnly,True,No Clean,1.4562779758513678
+13,(Surprise) NormalPredictor,True,No Clean,2.2686289850120827
+14,(Surprise) KNNBasic pearson item,True,Ranked 1 Item,1.830986661773256
+15,(Surprise) SVD (base model),True,Ranked 1 Item,1.6248675298205555
+16,(Surprise) SVD++,True,Ranked 1 Item,1.601761591027037
+17,(Surprise) NMF,True,Ranked 1 Item,2.6698387400539816
+18,(Surprise) SlopeOne,True,Ranked 1 Item,1.7891261686437236
+19,(Surprise) KNNBaseline,True,Ranked 1 Item,1.578060685380097
+20,(Surprise) KNNBasic cosine user min = 1,True,Ranked 1 Item,1.8483862162811342
+21,(Surprise) KNNBasic pearson user,True,Ranked 1 Item,1.8214461634696075
+22,(Surprise) KNNBasic cosine item,True,Ranked 1 Item,1.8612747239607337
+23,(Surprise) KNNWithMeans,True,Ranked 1 Item,1.796809706551007
+24,(Surprise) KNNWithZScore,True,Ranked 1 Item,1.7852719989432133
+25,(Surprise) CoClustering,True,Ranked 1 Item,1.8044605276331376
+26,(Surprise) BaselineOnly,True,Ranked 1 Item,1.6338200357561568
+27,(Surprise) NormalPredictor,True,Ranked 1 Item,2.448993442556671
+28,(Surprise) KNNBasic pearson item,True,Ranked Only 10,1.8803341197629997
+29,(Surprise) SVD (base model),True,Ranked Only 10,1.8428977956607404
+30,(Surprise) SVD++,True,Ranked Only 10,1.877314886518574
+31,(Surprise) NMF,True,Ranked Only 10,2.4797396214020893
+32,(Surprise) SlopeOne,True,Ranked Only 10,1.8597502489997901
+33,(Surprise) KNNBaseline,True,Ranked Only 10,1.8044605276331376
+34,(Surprise) KNNBasic cosine user min = 1,True,Ranked Only 10,1.895999370849727
+35,(Surprise) KNNBasic pearson user,True,Ranked Only 10,1.8865728749024422
+36,(Surprise) KNNBasic cosine item,True,Ranked Only 10,1.9372238654064124
+37,(Surprise) KNNWithMeans,True,Ranked Only 10,1.8562610334517027
+38,(Surprise) KNNWithZScore,True,Ranked Only 10,1.841798148927792
+39,(Surprise) CoClustering,True,Ranked Only 10,1.8706120996156645
+40,(Surprise) BaselineOnly,True,Ranked Only 10,1.8472898366744492
+41,(Surprise) NormalPredictor,True,Ranked Only 10,2.795719116949198
+42,(Surprise) KNNBasic pearson item,False,No Clean,1.4532141763909177
+43,(Surprise) SVD (base model),False,No Clean,1.4568343380400899
+44,(Surprise) SVD++,False,No Clean,1.425912088324687
+45,(Surprise) NMF,False,No Clean,2.7813339383287277
+46,(Surprise) SlopeOne,False,No Clean,1.4546076124924232
+47,(Surprise) KNNBaseline,False,No Clean,1.3925595291187318
+48,(Surprise) KNNBasic cosine user min = 1,False,No Clean,FAILED
+49,(Surprise) KNNBasic pearson user,False,No Clean,FAILED
+50,(Surprise) KNNBasic cosine item,False,No Clean,1.5388012341591082
+51,(Surprise) KNNWithMeans,False,No Clean,FAILED
+52,(Surprise) KNNWithZScore,False,No Clean,FAILED
+53,(Surprise) CoClustering,False,No Clean,1.517856972610753
+54,(Surprise) BaselineOnly,False,No Clean,1.4562779758513678
+55,(Surprise) NormalPredictor,False,No Clean,2.243485075419596
+56,(Surprise) KNNBasic pearson item,False,Ranked 1 Item,1.830986661773256
+57,(Surprise) SVD (base model),False,Ranked 1 Item,1.6075692110243303
+58,(Surprise) SVD++,False,Ranked 1 Item,1.602773123550356
+59,(Surprise) NMF,False,Ranked 1 Item,2.706466235030732
+60,(Surprise) SlopeOne,False,Ranked 1 Item,1.7891261686437236
+61,(Surprise) KNNBaseline,False,Ranked 1 Item,1.578060685380097
+62,(Surprise) KNNBasic cosine user min = 1,False,Ranked 1 Item,1.8483862162811342
+63,(Surprise) KNNBasic pearson user,False,Ranked 1 Item,1.8214461634696075
+64,(Surprise) KNNBasic cosine item,False,Ranked 1 Item,1.8612747239607337
+65,(Surprise) KNNWithMeans,False,Ranked 1 Item,1.796809706551007
+66,(Surprise) KNNWithZScore,False,Ranked 1 Item,1.7852719989432133
+67,(Surprise) CoClustering,False,Ranked 1 Item,1.7988380906849815
+68,(Surprise) BaselineOnly,False,Ranked 1 Item,1.6338200357561568
+69,(Surprise) NormalPredictor,False,Ranked 1 Item,2.5138191804425993
+70,(Surprise) KNNBasic pearson item,False,Ranked Only 10,1.8803341197629997
+71,(Surprise) SVD (base model),False,Ranked Only 10,1.8404777055875987
+72,(Surprise) SVD++,False,Ranked Only 10,1.8747231021904402
+73,(Surprise) NMF,False,Ranked Only 10,2.450978040485731
+74,(Surprise) SlopeOne,False,Ranked Only 10,1.8597502489997901
+75,(Surprise) KNNBaseline,False,Ranked Only 10,1.8044605276331376
+76,(Surprise) KNNBasic cosine user min = 1,False,Ranked Only 10,1.895999370849727
+77,(Surprise) KNNBasic pearson user,False,Ranked Only 10,1.8865728749024422
+78,(Surprise) KNNBasic cosine item,False,Ranked Only 10,1.9372238654064124
+79,(Surprise) KNNWithMeans,False,Ranked Only 10,1.8562610334517027
+80,(Surprise) KNNWithZScore,False,Ranked Only 10,1.841798148927792
+81,(Surprise) CoClustering,False,Ranked Only 10,1.8630154535663155
+82,(Surprise) BaselineOnly,False,Ranked Only 10,1.8472898366744492
+83,(Surprise) NormalPredictor,False,Ranked Only 10,2.83900820447725

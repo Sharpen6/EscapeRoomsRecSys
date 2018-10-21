@@ -1,0 +1,4 @@
+,Algorithm,Filled with pop,Clean fake method,RMSE
+0,(Surprise) SVD (base model),True,No Clean,1.4408938338818162
+1,(Surprise) SVD (base model),True,Ranked 1 Item,1.6070650337464372
+2,(Surprise) SVD (base model),True,Ranked Only 10,1.852327809655903
