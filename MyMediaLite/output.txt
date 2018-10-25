@@ -1,0 +1,29 @@
+
+R:\Github\EscapeRoomsRecSys\MyMediaLite>rating_prediction.exe --training-file=..\resources\aggregated\no_new_in_test\train.csv --test-file=..\resources\aggregated\no_new_in_test\test.csv --recommender=SlopeOne    
+training data: 20197 users, 375 items, 40022 ratings, sparsity 99.47158
+test data:     227 users, 216 items, 687 ratings, sparsity 98.59887
+SlopeOne  training_time 00:00:00.1575782 RMSE 1.285514 MAE 0.8116378 CBD 0.1346645 new items: RMSE 1.09615 MAE 0.92473 CBD 0.06005 testing_time 00:00:00.0189502
+
+R:\Github\EscapeRoomsRecSys\MyMediaLite>rating_prediction.exe --training-file=..\resources\aggregated\no_new_in_test\train.csv --test-file=..\resources\aggregated\no_new_in_test\test.csv --recommender=UserItemBaseline               
+training data: 20197 users, 375 items, 40022 ratings, sparsity 99.47158
+test data:     227 users, 216 items, 687 ratings, sparsity 98.59887
+UserItemBaseline reg_u=15 reg_i=10 num_iter=10  training_time 00:00:00.0169551 RMSE 1.345487 MAE 0.9022559 CBD 0.1355121 new items: RMSE 1.23716 MAE 1.09863 CBD 0.06642 testing_time 00:00:00.0179516
+
+R:\Github\EscapeRoomsRecSys\MyMediaLite>rating_prediction.exe --training-file=..\resources\aggregated\no_new_in_test\train.csv --test-file=..\resources\aggregated\no_new_in_test\test.csv --recommender=SigmoidSVDPlusPlus      
+training data: 20197 users, 375 items, 40022 ratings, sparsity 99.47158
+test data:     227 users, 216 items, 687 ratings, sparsity 98.59887
+SigmoidSVDPlusPlus num_factors=10 regularization=0.015 bias_reg=0.33 frequency_regularization=False learn_rate=0.001 bias_learn_rate=0.7 learn_rate_decay=1 num_iter=30 loss=RMSE  training_time 00:00:03.1289912 RMSE 1.951966 MAE 1.043827 CBD 0.2357849 new items: RMSE 0.83104 MAE 0.14633 CBD 0.03662 testing_time 00:00:00.0178338
+
+R:\Github\EscapeRoomsRecSys\MyMediaLite>rating_prediction.exe --training-file=..\resources\aggregated\no_new_in_test\train.csv --test-file=..\resources\aggregated\no_new_in_test\test.csv --recommender=ItemKNN         
+training data: 20197 users, 375 items, 40022 ratings, sparsity 99.47158
+test data:     227 users, 216 items, 687 ratings, sparsity 98.59887
+ItemKNN k=80 correlation=BinaryCosine weighted_binary=False alpha=0; baseline predictor: reg_u=15 reg_i=10 num_iter=10  training_time 00:00:00.0897331 RMSE 1.397052 MAE 0.9131847 CBD 0.1410042 new items: RMSE 1.23716 MAE 1.09863 CBD 0.06642 testing_time 00:00:00.3079257
+
+R:\Github\EscapeRoomsRecSys\MyMediaLite>rating_prediction.exe --training-file=..\resources\aggregated\no_new_in_test\train.csv --test-file=..\resources\aggregated\no_new_in_test\test.csv --recommender=MatrixFactorization     
+training data: 20197 users, 375 items, 40022 ratings, sparsity 99.47158
+test data:     227 users, 216 items, 687 ratings, sparsity 98.59887
+MatrixFactorization num_factors=10 regularization=0.015 learn_rate=0.01 learn_rate_decay=1 num_iter=30  training_time 00:00:00.2016545 RMSE 1.33586 MAE 0.9798082 CBD 0.1413205 new items: RMSE 1.09615 MAE 0.92473 CBD 0.06005 testing_time 00:00:00.0114805
+
+
+
+

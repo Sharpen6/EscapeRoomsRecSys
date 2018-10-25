@@ -1,0 +1,3 @@
+,alg,AUC,prec@5,prec@10,MAP,recall@5,recall@10,NDCG,MRR,filled_with_popular,clean_fake_method
+0,(MyMediaLite) ItemKNNTrueNo Clean,0.62983,0.05034,0.04762,0.00609,0.0115,0.01799,0.02086,0.09699,True,No Clean
+1,(Surprise) KNNBasic cosine userTrueNo Clean,0.52261,0.00952,0.00476,0.00013,0.00051,0.00051,0.0009,0.01247,True,No Clean

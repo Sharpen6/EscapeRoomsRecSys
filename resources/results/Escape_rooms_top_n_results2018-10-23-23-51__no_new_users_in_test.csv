@@ -1,0 +1,2 @@
+,alg,AUC,prec@5,prec@10,MAP,recall@5,recall@10,NDCG,MRR,filled_with_popular,clean_fake_method
+0,(Surprise) KNNBasic pearson userTrueNo Clean,0.67754,0.04317,0.0467,0.08726,0.12245,0.24611,0.13649,0.13281,True,No Clean

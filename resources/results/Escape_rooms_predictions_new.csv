@@ -1,0 +1,27 @@
+Algorithm,RMSE
+(M) UserKNN ,1.226
+(M) SigmoidCombinedAsymmetricFactorModel,1.247
+(M) SVD++,1.257
+(M) SlopeOne,1.286
+(S) KNNBaseline,1.303
+(M) MatrixFactorization,1.336
+(S) SVD++,1.337
+(M) UserItemBaseline,1.345
+(M) CoClustering,1.386
+(S) KNNWithZScore,1.392
+(M) ItemKNN - cosine,1.397
+(S) SVD (base model),1.399
+(S) KNNWithMeans,1.415
+(S) BaselineOnly,1.422
+(S) KNNBasic pearson item,1.431
+(S) SlopeOne,1.433
+(S) CoClustering,1.437
+(M) UserAverage,1.539
+(M) ItemAverage,1.563
+(S) KNNBasic cosine item,1.583
+(M) GlobalAverage,1.659
+(M) SigmoidSVDPlusPlus,1.952
+(S) NormalPredictor,2.289
+(S) NMF,3.405
+(S) KNNBasic cosine user min = 1,FAILED
+(S) KNNBasic cosine user min = 1,FAILED

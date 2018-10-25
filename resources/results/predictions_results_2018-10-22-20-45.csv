@@ -1,0 +1,29 @@
+,Algorithm,Filled with pop,Clean fake method,RMSE
+0,(Surprise) KNNBasic pearson item,True,No Clean,FAILED
+1,(Surprise) SVD (base model),True,No Clean,FAILED
+2,(Surprise) SVD++,True,No Clean,FAILED
+3,(Surprise) NMF,True,No Clean,FAILED
+4,(Surprise) SlopeOne,True,No Clean,FAILED
+5,(Surprise) KNNBaseline,True,No Clean,FAILED
+6,(Surprise) KNNBasic cosine user min = 1,True,No Clean,FAILED
+7,(Surprise) KNNBasic pearson user,True,No Clean,FAILED
+8,(Surprise) KNNBasic cosine item,True,No Clean,FAILED
+9,(Surprise) KNNWithMeans,True,No Clean,FAILED
+10,(Surprise) KNNWithZScore,True,No Clean,FAILED
+11,(Surprise) CoClustering,True,No Clean,FAILED
+12,(Surprise) BaselineOnly,True,No Clean,FAILED
+13,(Surprise) NormalPredictor,True,No Clean,FAILED
+14,(Surprise) KNNBasic pearson item,False,No Clean,FAILED
+15,(Surprise) SVD (base model),False,No Clean,FAILED
+16,(Surprise) SVD++,False,No Clean,FAILED
+17,(Surprise) NMF,False,No Clean,FAILED
+18,(Surprise) SlopeOne,False,No Clean,FAILED
+19,(Surprise) KNNBaseline,False,No Clean,FAILED
+20,(Surprise) KNNBasic cosine user min = 1,False,No Clean,FAILED
+21,(Surprise) KNNBasic pearson user,False,No Clean,FAILED
+22,(Surprise) KNNBasic cosine item,False,No Clean,FAILED
+23,(Surprise) KNNWithMeans,False,No Clean,FAILED
+24,(Surprise) KNNWithZScore,False,No Clean,FAILED
+25,(Surprise) CoClustering,False,No Clean,FAILED
+26,(Surprise) BaselineOnly,False,No Clean,FAILED
+27,(Surprise) NormalPredictor,False,No Clean,FAILED

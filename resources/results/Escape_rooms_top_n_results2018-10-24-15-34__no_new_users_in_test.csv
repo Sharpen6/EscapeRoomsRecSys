@@ -1,0 +1,2 @@
+,alg,AUC,prec@5,prec@10,MAP,recall@5,recall@10,NDCG,MRR,filled_with_popular,clean_fake_method
+0,(Surprise) KNNBasic cosine itemTrueNo Clean,0.55266,0.01145,0.01366,0.01341,0.01598,0.04083,0.0255,0.03212,True,No Clean

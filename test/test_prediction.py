@@ -26,9 +26,9 @@ class TestRecSysMethods(unittest.TestCase):
 
         rec_sys_algorithms = {}
 
-        # rec_sys_algorithms = self.add_mymedialite_algorithms(rec_sys_algorithms)
+        #rec_sys_algorithms = self.add_mymedialite_algorithms(rec_sys_algorithms)
         rec_sys_algorithms = self.add_surprise_algorithms(rec_sys_algorithms)
-        # rec_sys_algorithms = self.add_k_markov_algorithms(rec_sys_algorithms)
+        #rec_sys_algorithms = self.add_k_markov_algorithms(rec_sys_algorithms)
 
         return rec_sys_algorithms
 
@@ -39,10 +39,15 @@ class TestRecSysMethods(unittest.TestCase):
         train_set = pd.read_csv(train_set_path, parse_dates=[3], index_col='index')
         test_set = pd.read_csv(test_set_path, parse_dates=[3], index_col='index')
 
+        users_in_train = train_set.userID.unique()
+        test_set = test_set[test_set.userID.isin(users_in_train)]
+
+        #test_set.to_csv('..//resources//aggregated//test_numerized_with_anon__without_new.csv')
+
         clean_fake_methods = [
             CleanFakeUsersNone(),
-            CleanFakeUsersRankedOne(),
-            CleanFakeUsersRankedOnlyTen()
+            #CleanFakeUsersRankedOne(),
+            #CleanFakeUsersRankedOnlyTen()
         ]
         fill_with_popular = [
             True,
@@ -50,8 +55,8 @@ class TestRecSysMethods(unittest.TestCase):
         ]
         n_clusters = 3
         use_clustering = [
-            True,
-            #False
+            #True,
+            False
         ]
         if fill_with_popular:
             # train most popular for default
@@ -60,16 +65,16 @@ class TestRecSysMethods(unittest.TestCase):
 
         algs_results = pd.DataFrame(columns=['Algorithm', 'Filled with pop', 'Clean fake method', 'RMSE'])
 
-        users_data = train_set.groupby('userID')['rating'].agg(
-            ['count', 'mean', 'mad', 'median', 'min', 'max', 'std',
-             ('skew', lambda value: skew(value)),
-             ('kurtosis', lambda value: kurtosis(value)),
-             ]
-        ).fillna(0)
+        #users_data = train_set.groupby('userID')['rating'].agg(
+        #    ['count', 'mean', 'mad', 'median', 'min', 'max', 'std',
+        #     ('skew', lambda value: skew(value)),
+        #     ('kurtosis', lambda value: kurtosis(value)),
+        #     ]
+        #).fillna(0)
 
-        kmeans = KMeans(n_clusters=n_clusters, random_state=0).fit(users_data)
-        users_data = users_data.reset_index()
-        cluster_user_mapping = dict(zip(users_data['userID'], kmeans.labels_))
+        #kmeans = KMeans(n_clusters=n_clusters, random_state=0).fit(users_data)
+        #users_data = users_data.reset_index()
+        #cluster_user_mapping = dict(zip(users_data['userID'], kmeans.labels_))
 
 
         for fill_with_pop in fill_with_popular:
@@ -84,27 +89,15 @@ class TestRecSysMethods(unittest.TestCase):
                         custom_train_set['userID'] = custom_train_set['userID'].astype(int)
 
                         try:
-                            if use_clustering:
+                            model.fit(custom_train_set)
 
-                                model.fit(custom_train_set)
-                                predictions = model.get_rating_predictions(test_set, cluster_user_mapping)
+                            predictions = model.get_rating_predictions(test_set)
 
-                                rmse = self.calc_rmse_from_predictions(predictions)
+                            rmse = self.calc_rmse_from_predictions(predictions)
 
-                                algs_results = algs_results.append({"Algorithm": name, "Filled with pop": fill_with_pop,
-                                                                    "Clean fake method": clean_fake_method.print(),
-                                                                    "RMSE": rmse},
-                                                                   ignore_index=True)
-
-                            else:
-                                model.fit(custom_train_set)
-                                predictions = model.get_rating_predictions(test_set)
-
-                                rmse = self.calc_rmse_from_predictions(predictions)
-
-                                algs_results = algs_results.append({"Algorithm": name, "Filled with pop": fill_with_pop,
-                                                                    "Clean fake method": clean_fake_method.print(), "RMSE": rmse},
-                                                                   ignore_index=True)
+                            algs_results = algs_results.append({"Algorithm": name, "Filled with pop": fill_with_pop,
+                                                                "Clean fake method": clean_fake_method.print(), "RMSE": rmse},
+                                                               ignore_index=True)
                         except:
                             algs_results = algs_results.append({"Algorithm": name, "Filled with pop": fill_with_pop,
                                                                 "Clean fake method": clean_fake_method.print(),
@@ -157,24 +150,24 @@ class TestRecSysMethods(unittest.TestCase):
 
     def add_surprise_algorithms(self, rec_sys_algorithms):
         algos = {
-            #"(Surprise) KNNBasic pearson item": SurpriseTopN.SurpriseRecMethod(
-            #    KNNBasic(sim_options={'name': 'pearson_baseline', 'user_based': False})),
+            "(Surprise) KNNBasic pearson item": SurpriseTopN.SurpriseRecMethod(
+                KNNBasic(sim_options={'name': 'pearson_baseline', 'user_based': False})),
             "(Surprise) SVD (base model)": SurpriseTopN.SurpriseRecMethod(SVD()),
-            #"(Surprise) SVD++": SurpriseTopN.SurpriseRecMethod(SVDpp()),
-            #"(Surprise) NMF": SurpriseTopN.SurpriseRecMethod(NMF()),
-            #"(Surprise) SlopeOne": SurpriseTopN.SurpriseRecMethod(SlopeOne()),
-            #"(Surprise) KNNBaseline": SurpriseTopN.SurpriseRecMethod(KNNBaseline()),
-            #"(Surprise) KNNBasic cosine user min = 1": SurpriseTopN.SurpriseRecMethod(
-            #    KNNBasic(sim_options={'name': 'cosine', 'user_based': True})),
-            #"(Surprise) KNNBasic pearson user": SurpriseTopN.SurpriseRecMethod(
-            #    KNNBasic(sim_options={'name': 'pearson_baseline', 'user_based': True})),
-            #"(Surprise) KNNBasic cosine item": SurpriseTopN.SurpriseRecMethod(
-            #    KNNBasic(sim_options={'name': 'cosine', 'user_based': False})),
-            #"(Surprise) KNNWithMeans": SurpriseTopN.SurpriseRecMethod(KNNWithMeans()),
-            #"(Surprise) KNNWithZScore": SurpriseTopN.SurpriseRecMethod(KNNWithZScore()),
-            #"(Surprise) CoClustering": SurpriseTopN.SurpriseRecMethod(CoClustering()),
-            #"(Surprise) BaselineOnly": SurpriseTopN.SurpriseRecMethod(BaselineOnly()),
-            #"(Surprise) NormalPredictor": SurpriseTopN.SurpriseRecMethod(NormalPredictor())
+            "(Surprise) SVD++": SurpriseTopN.SurpriseRecMethod(SVDpp()),
+            "(Surprise) NMF": SurpriseTopN.SurpriseRecMethod(NMF()),
+            "(Surprise) SlopeOne": SurpriseTopN.SurpriseRecMethod(SlopeOne()),
+            "(Surprise) KNNBaseline": SurpriseTopN.SurpriseRecMethod(KNNBaseline()),
+            "(Surprise) KNNBasic cosine user min = 1": SurpriseTopN.SurpriseRecMethod(
+                KNNBasic(sim_options={'name': 'cosine', 'user_based': True})),
+            "(Surprise) KNNBasic pearson user": SurpriseTopN.SurpriseRecMethod(
+                KNNBasic(sim_options={'name': 'pearson_baseline', 'user_based': True})),
+            "(Surprise) KNNBasic cosine item": SurpriseTopN.SurpriseRecMethod(
+                KNNBasic(sim_options={'name': 'cosine', 'user_based': False})),
+            "(Surprise) KNNWithMeans": SurpriseTopN.SurpriseRecMethod(KNNWithMeans()),
+            "(Surprise) KNNWithZScore": SurpriseTopN.SurpriseRecMethod(KNNWithZScore()),
+            "(Surprise) CoClustering": SurpriseTopN.SurpriseRecMethod(CoClustering()),
+            "(Surprise) BaselineOnly": SurpriseTopN.SurpriseRecMethod(BaselineOnly()),
+            "(Surprise) NormalPredictor": SurpriseTopN.SurpriseRecMethod(NormalPredictor())
         }
 
         new_algo_list = {**rec_sys_algorithms, **algos}

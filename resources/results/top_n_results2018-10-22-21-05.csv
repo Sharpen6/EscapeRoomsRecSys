@@ -1,0 +1,2 @@
+,alg,AUC,prec@5,prec@10,MAP,recall@5,recall@10,NDCG,MRR,filled_with_popular,clean_fake_method
+0,(MyMediaLite) MostPopularTrueNo Clean,0.53462,0.0087,0.00986,0.01029,0.01362,0.03666,0.02015,0.0261,True,No Clean

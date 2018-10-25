@@ -1,0 +1,15 @@
+,alg,AUC,prec@5,prec@10,MAP,recall@5,recall@10,NDCG,MRR,filled_with_popular,clean_fake_method
+0,(Surprise) SVD (base model)TrueNo Clean,0.54688,0.01275,0.01319,0.01521,0.02232,0.05054,0.02787,0.03375,True,No Clean
+1,(Surprise) SVD++TrueNo Clean,0.54945,0.01449,0.01449,0.01944,0.0251,0.055,0.0326,0.03843,True,No Clean
+2,(Surprise) NMFTrueNo Clean,0.55237,0.01333,0.01507,0.01606,0.02645,0.06771,0.03221,0.0334,True,No Clean
+3,(Surprise) SlopeOneTrueNo Clean,0.54591,0.00986,0.01362,0.01562,0.01745,0.05669,0.02926,0.03221,True,No Clean
+4,(Surprise) KNNBaselineTrueNo Clean,0.55787,0.01855,0.01623,0.04351,0.05054,0.07339,0.05627,0.0683,True,No Clean
+5,(Surprise) KNNBasic cosine userTrueNo Clean,0.58384,0.02551,0.02072,0.04524,0.07855,0.12125,0.06914,0.06667,True,No Clean
+6,(Surprise) KNNBasic pearson userTrueNo Clean,Failed,Failed,Failed,Failed,Failed,Failed,Failed,Failed,True,No Clean
+7,(Surprise) KNNBasic cosine itemTrueNo Clean,0.5296,0.00522,0.00725,0.00671,0.01255,0.03328,0.01496,0.01411,True,No Clean
+8,(Surprise) KNNBasic pearson itemTrueNo Clean,0.54362,0.01275,0.0113,0.01733,0.03461,0.0573,0.03,0.02959,True,No Clean
+9,(Surprise) KNNWithMeansTrueNo Clean,0.55148,0.01652,0.01391,0.02408,0.04369,0.06724,0.0387,0.04204,True,No Clean
+10,(Surprise) KNNWithZScoreTrueNo Clean,0.548,0.01681,0.01275,0.02159,0.04758,0.06398,0.03526,0.03493,True,No Clean
+11,(Surprise) CoClusteringTrueNo Clean,0.57225,0.0113,0.01826,0.0265,0.03186,0.10892,0.04923,0.03978,True,No Clean
+12,(Surprise) BaselineOnlyTrueNo Clean,0.55821,0.02058,0.0171,0.02236,0.03826,0.06816,0.03873,0.0436,True,No Clean
+13,(Surprise) NormalPredictorTrueNo Clean,0.52331,0.00754,0.00565,0.00968,0.01829,0.027,0.01556,0.01842,True,No Clean

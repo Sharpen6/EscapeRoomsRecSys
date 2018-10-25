@@ -1,0 +1,239 @@
+
+R:\Github\EscapeRoomsRecSys\MyMediaLite>rating_prediction.exe --training-file=..\resources\tmp\train_file.csv --test-file=..\resources\tmp\test_file.csv --recommender=MostPopular 
+Unknown recommender: 'MostPopular'
+
+MyMediaLite Rating Prediction 3.11
+
+ usage:  rating_prediction --training-file=FILE --recommender=METHOD [OPTIONS]
+
+  recommenders (plus options and their defaults):
+   - BiPolarSlopeOne
+   - FactorWiseMatrixFactorization num_factors=10 shrinkage=25 sensibility=1E-05 num_iter=10 reg_u=15 reg_i=10
+       supports --find-iter=N
+   - GlobalAverage
+       supports --online-evaluation
+   - ItemAttributeKNN k=80 correlation=BinaryCosine weighted_binary=False alpha=0; baseline predictor: reg_u=15 reg_i=10 num_iter=10
+       needs --item-attributes=FILE
+       supports --online-evaluation
+   - ItemAverage
+       supports --online-evaluation
+   - ItemKNN k=80 correlation=BinaryCosine weighted_binary=False alpha=0; baseline predictor: reg_u=15 reg_i=10 num_iter=10
+       supports --online-evaluation
+   - MatrixFactorization num_factors=10 regularization=0.015 learn_rate=0.01 learn_rate_decay=1 num_iter=30
+       supports --find-iter=N, --online-evaluation
+   - SlopeOne
+   - UserAttributeKNN k=80 correlation=BinaryCosine weighted_binary=False alpha=0; baseline predictor: reg_u=15 reg_i=10 num_iter=10
+       needs --user-attributes=FILE
+       supports --online-evaluation
+   - UserAverage
+       supports --online-evaluation
+   - UserItemBaseline reg_u=15 reg_i=10 num_iter=10
+       supports --find-iter=N, --online-evaluation
+   - UserKNN k=80 correlation=BinaryCosine weighted_binary=False alpha=0; baseline predictor: reg_u=15 reg_i=10 num_iter=10
+       supports --online-evaluation
+   - TimeAwareBaseline num_iter=30 bin_size=70 beta=0.4 user_bias_learn_rate=0.003 item_bias_learn_rate=0.002 alpha_learn_rate=1E-05 item_bias_by_time_bin_learn_rate=5E-06 user_bias_by_day_learn_rate=0.0025 user_scaling_learn_rate=0.008 user_scaling_by_day_learn_rate=0.002 reg_u=0.03 reg_i=0.03 reg_alpha=50 reg_item_bias_by_time_bin=0.1 reg_user_bias_by_day=0.005 reg_user_scaling=0.01 reg_user_scaling_by_day=0.005
+       supports --find-iter=N
+   - TimeAwareBaselineWithFrequencies num_iter=40 bin_size=70 beta=0.4 user_bias_learn_rate=0.00267 item_bias_learn_rate=0.000488 alpha_learn_rate=3.11E-06 item_bias_by_time_bin_learn_rate=0.000115 user_bias_by_day_learn_rate=0.000257 user_scaling_learn_rate=0.00564 user_scaling_by_day_learn_rate=0.00103 reg_u=0.0255 reg_i=0.0255 reg_alpha=3.95 reg_item_bias_by_time_bin=0.0929 reg_user_bias_by_day=0.00231 reg_user_scaling=0.0476 reg_user_scaling_by_day=0.019 frequency_log_base=6.76 item_bias_at_frequency_learn_rate=0.00236 reg_item_bias_at_frequency=1.1E-08
+       supports --find-iter=N
+   - CoClustering num_user_clusters=3 num_item_clusters=3 num_iter=30
+       supports --find-iter=N
+   - Random
+       supports --online-evaluation
+   - Constant constant_rating=1
+       supports --online-evaluation
+   - LatentFeatureLogLinearModel num_factors=10 bias_reg=0.01 reg_u=0.015 reg_i=0.015 frequency_regularization=False learn_rate=0.01 bias_learn_rate=1 num_iter=30 loss=RMSE
+       supports --find-iter=N
+   - BiasedMatrixFactorization num_factors=10 bias_reg=0.01 reg_u=0.015 reg_i=0.015 frequency_regularization=False learn_rate=0.01 bias_learn_rate=1 learn_rate_decay=1 num_iter=30 bold_driver=False loss=RMSE max_threads=1 naive_parallelization=False
+       supports --find-iter=N, --online-evaluation
+   - SVDPlusPlus num_factors=10 regularization=0.015 bias_reg=0.33 frequency_regularization=False learn_rate=0.001 bias_learn_rate=0.7 learn_rate_decay=1 num_iter=30
+       supports --find-iter=N, --online-evaluation
+   - SigmoidSVDPlusPlus num_factors=10 regularization=0.015 bias_reg=0.33 frequency_regularization=False learn_rate=0.001 bias_learn_rate=0.7 learn_rate_decay=1 num_iter=30 loss=RMSE
+       supports --find-iter=N, --online-evaluation
+   - SocialMF num_factors=10 reg_u=0.015 reg_i=0.015 bias_reg=0.01 social_regularization=1 learn_rate=0.01 bias_learn_rate=1 num_iter=30 bold_driver=False loss=RMSE
+       needs --user-relations=FILE
+       supports --find-iter=N, --online-evaluation
+   - SigmoidItemAsymmetricFactorModel num_factors=10 regularization=0.015 bias_reg=0.33 frequency_regularization=False learn_rate=0.001 bias_learn_rate=0.7 learn_rate_decay=1 num_iter=1 loss=30
+       supports --find-iter=N, --online-evaluation
+   - SigmoidUserAsymmetricFactorModel num_factors=10 regularization=0.015 bias_reg=0.33 frequency_regularization=False learn_rate=0.001 bias_learn_rate=0.7 learn_rate_decay=1 num_iter=30 loss=RMSE
+       supports --find-iter=N, --online-evaluation
+   - SigmoidCombinedAsymmetricFactorModel num_factors=10 regularization=0.015 bias_reg=0.33 frequency_regularization=False learn_rate=0.001 bias_learn_rate=0.7 learn_rate_decay=1 num_iter=30 loss=RMSE
+       supports --find-iter=N, --online-evaluation
+   - NaiveBayes class_smoothing=1 attribute_smoothing=1
+       needs --item-attributes=FILE
+       supports --online-evaluation
+   - ExternalRatingPredictor prediction_file=FILENAME
+   - GSVDPlusPlus num_factors=10 regularization=0.015 bias_reg=0.33 frequency_regularization=False learn_rate=0.001 bias_learn_rate=0.7 learn_rate_decay=1 num_iter=30
+       needs --item-attributes=FILE
+       supports --find-iter=N, --online-evaluation
+  method ARGUMENTS have the form name=value
+
+  general OPTIONS:
+   --recommender=METHOD             set recommender method (default BiasedMatrixFactorization)
+   --recommender-options=OPTIONS    use OPTIONS as recommender options
+   --help                           display this usage information and exit
+   --version                        display version information and exit
+   --random-seed=N                  initialize random number generator with N
+   --rating-type=float|byte         store ratings internally as floats (default) or bytes
+   --no-id-mapping                  do not map user and item IDs to internal IDs, keep original IDs
+
+  files:
+   --training-file=FILE                   read training data from FILE
+   --test-file=FILE                       read test data from FILE
+   --test-no-ratings                      test data contains no rating column
+                                          (needs both --prediction-file=FILE and --test-file=FILE)
+   --file-format=movielens_1m|kddcup_2011|ignore_first_line|default
+   --data-dir=DIR                         load all files from DIR
+   --user-attributes=FILE                 file with user attribute information, 1 tuple per line
+   --item-attributes=FILE                 file with item attribute information, 1 tuple per line
+   --user-relations=FILE                  file with user relation information, 1 tuple per line
+   --item-relations=FILE                  file with item relation information, 1 tuple per line
+   --save-model=FILE                      save computed model to FILE
+   --load-model=FILE                      load model from FILE
+   --save-user-mapping=FILE               save user ID mapping to FILE
+   --save-item-mapping=FILE               save item ID mapping to FILE
+   --load-user-mapping=FILE               load user ID mapping from FILE
+   --load-item-mapping=FILE               load item ID mapping from FILE
+
+  prediction options:
+   --prediction-file=FILE         write the rating predictions to FILE
+   --prediction-line=FORMAT       format of the prediction line; {0}, {1}, {2} refer to user ID,
+                                  item ID, and predicted rating; default is {0}\t{1}\t{2};
+   --prediction-header=LINE       print LINE to the first line of the prediction file
+
+  evaluation options:
+   --cross-validation=K                perform k-fold cross-validation on the training data
+   --test-ratio=NUM                    use a ratio of NUM of the training data for evaluation (simple split)
+   --chronological-split=NUM|DATETIME  use the last ratio of NUM of the training data ratings for evaluation,
+                                       or use the ratings from DATETIME on for evaluation (requires time information
+                                       in the training data)
+   --online-evaluation                 perform online evaluation (use every tested rating for incremental training)
+   --search-hp                         search for good hyperparameter values (experimental feature)
+   --compute-fit                       display fit on training data
+   --measures=LIST                     comma- or space-separated list of evaluation measures to display (default is RMSE, MAE, CBD)
+                                       use --help-measures to get a list of all available measures
+
+  options for finding the right number of iterations (iterative methods)
+   --find-iter=N                  give out statistics every N iterations
+   --num-iter=N                   start measuring at N iterations
+   --max-iter=N                   perform at most N iterations
+   --epsilon=NUM                  abort iterations if main evaluation measure is more than best result plus NUM
+   --cutoff=NUM                   abort if main evaluation measure is above NUM
+
+
+R:\Github\EscapeRoomsRecSys\MyMediaLite>rating_prediction.exe --training-file=..\resources\tmp\train_file.csv --test-file=..\resources\tmp\test_file.csv --recommender=BiPolarSlopeOne  					 
+training data: 20197 users, 375 items, 40022 ratings, sparsity 99.47158
+test data:     690 users, 257 items, 1234 ratings, sparsity 99.30412
+BiPolarSlopeOne  training_time 00:00:00.1875024 RMSE 1.402324 MAE 0.9560615 CBD 0.1224143 new users: RMSE 1.43818 MAE 1.011 CBD 0.0914 new items: RMSE 1.18295 MAE 0.96479 CBD 0.06101  new users and items: RMSE 1.23843 MAE 0.99199 CBD 0.06166 testing_time 00:00:00.0179481
+
+R:\Github\EscapeRoomsRecSys\MyMediaLite>rating_prediction.exe --training-file=..\resources\tmp\train_file.csv --test-file=..\resources\tmp\test_file.csv --recommender=FactorWiseMatrixFactorization         
+training data: 20197 users, 375 items, 40022 ratings, sparsity 99.47158
+test data:     690 users, 257 items, 1234 ratings, sparsity 99.30412
+FactorWiseMatrixFactorization num_factors=10 shrinkage=25 sensibility=1E-05 num_iter=10 reg_u=15 reg_i=10  training_time 00:00:01.8331238 RMSE 1.969172 MAE 1.063374 CBD 0.1659662 new users: RMSE 1.39339 MAE 0.77229 CBD 0.08769 new items: RMSE 1.23791 MAE 1.03512 CBD 0.06359  new users and items: RMSE 1.23843 MAE 0.99199 CBD 0.06166 testing_time 00:00:00.0069817
+
+R:\Github\EscapeRoomsRecSys\MyMediaLite>rating_prediction.exe --training-file=..\resources\tmp\train_file.csv --test-file=..\resources\tmp\test_file.csv --recommender=GlobalAverage                         
+training data: 20197 users, 375 items, 40022 ratings, sparsity 99.47158
+test data:     690 users, 257 items, 1234 ratings, sparsity 99.30412
+GlobalAverage  training_time 00:00:00 RMSE 1.564835 MAE 1.107866 CBD 0.1277264 new users: RMSE 1.43818 MAE 1.011 CBD 0.0914 new items: RMSE 1.18295 MAE 0.96479 CBD 0.06101  new users and items: RMSE 1.23843 MAE 0.99199 CBD 0.06166 testing_time 00:00:00.0139628
+
+R:\Github\EscapeRoomsRecSys\MyMediaLite>rating_prediction.exe --training-file=..\resources\tmp\train_file.csv --test-file=..\resources\tmp\test_file.csv --recommender=ItemAttributeKNN                      
+
+R:\Github\EscapeRoomsRecSys\MyMediaLite>rating_prediction.exe --training-file=..\resources\tmp\train_file.csv --test-file=..\resources\tmp\test_file.csv --recommender=ItemAverage                           
+training data: 20197 users, 375 items, 40022 ratings, sparsity 99.47158
+test data:     690 users, 257 items, 1234 ratings, sparsity 99.30412
+ItemAverage  training_time 00:00:00.0020013 RMSE 1.480514 MAE 0.8848163 CBD 0.1213821 new users: RMSE 1.37053 MAE 0.78485 CBD 0.08592 new items: RMSE 1.18295 MAE 0.96479 CBD 0.06101  new users and items: RMSE 1.23843 MAE 0.99199 CBD 0.06166 testing_time 00:00:00.0139290
+
+R:\Github\EscapeRoomsRecSys\MyMediaLite>rating_prediction.exe --training-file=..\resources\tmp\train_file.csv --test-file=..\resources\tmp\test_file.csv --recommender=ItemKNN                               
+training data: 20197 users, 375 items, 40022 ratings, sparsity 99.47158
+test data:     690 users, 257 items, 1234 ratings, sparsity 99.30412
+ItemKNN k=80 correlation=BinaryCosine weighted_binary=False alpha=0; baseline predictor: reg_u=15 reg_i=10 num_iter=10  training_time 00:00:00.0917538 RMSE 1.395431 MAE 0.8507314 CBD 0.1173718 new users: RMSE 1.39339 MAE 0.77229 CBD 0.08769 new items: RMSE 1.23791 MAE 1.03512 CBD 0.06359  new users and items: RMSE 1.23843 MAE 0.99199 CBD 0.06166 testing_time 00:00:00.2682820
+
+R:\Github\EscapeRoomsRecSys\MyMediaLite>rating_prediction.exe --training-file=..\resources\tmp\train_file.csv --test-file=..\resources\tmp\test_file.csv --recommender=MatrixFactorization                   
+training data: 20197 users, 375 items, 40022 ratings, sparsity 99.47158
+test data:     690 users, 257 items, 1234 ratings, sparsity 99.30412
+MatrixFactorization num_factors=10 regularization=0.015 learn_rate=0.01 learn_rate_decay=1 num_iter=30  training_time 00:00:00.1864995 RMSE 1.405889 MAE 1.007863 CBD 0.1201686 new users: RMSE 1.43818 MAE 1.011 CBD 0.0914 new items: RMSE 1.18295 MAE 0.96479 CBD 0.06101  new users and items: RMSE 1.23843 MAE 0.99199 CBD 0.06166 testing_time 00:00:00.0119669
+
+R:\Github\EscapeRoomsRecSys\MyMediaLite>rating_prediction.exe --training-file=..\resources\tmp\train_file.csv --test-file=..\resources\tmp\test_file.csv --recommender=SlopeOne                              
+training data: 20197 users, 375 items, 40022 ratings, sparsity 99.47158
+test data:     690 users, 257 items, 1234 ratings, sparsity 99.30412
+SlopeOne  training_time 00:00:00.1456402 RMSE 1.355312 MAE 0.9000083 CBD 0.1154848 new users: RMSE 1.43818 MAE 1.011 CBD 0.0914 new items: RMSE 1.18295 MAE 0.96479 CBD 0.06101  new users and items: RMSE 1.23843 MAE 0.99199 CBD 0.06166 testing_time 00:00:00.0189190
+
+R:\Github\EscapeRoomsRecSys\MyMediaLite>rating_prediction.exe --training-file=..\resources\tmp\train_file.csv --test-file=..\resources\tmp\test_file.csv --recommender=UserAttributeKNN                      
+
+R:\Github\EscapeRoomsRecSys\MyMediaLite>rating_prediction.exe --training-file=..\resources\tmp\train_file.csv --test-file=..\resources\tmp\test_file.csv --recommender=UserAverage                           
+training data: 20197 users, 375 items, 40022 ratings, sparsity 99.47158
+test data:     690 users, 257 items, 1234 ratings, sparsity 99.30412
+UserAverage  training_time 00:00:00.0019888 RMSE 1.495228 MAE 0.991204 CBD 0.1241523 new users: RMSE 1.43818 MAE 1.011 CBD 0.0914 new items: RMSE 1.14838 MAE 0.80773 CBD 0.05303  new users and items: RMSE 1.23843 MAE 0.99199 CBD 0.06166 testing_time 00:00:00.0139338
+
+R:\Github\EscapeRoomsRecSys\MyMediaLite>rating_prediction.exe --training-file=..\resources\tmp\train_file.csv --test-file=..\resources\tmp\test_file.csv --recommender=UserItemBaseline                      
+training data: 20197 users, 375 items, 40022 ratings, sparsity 99.47158
+test data:     690 users, 257 items, 1234 ratings, sparsity 99.30412
+UserItemBaseline reg_u=15 reg_i=10 num_iter=10  training_time 00:00:00.0169566 RMSE 1.36693 MAE 0.844647 CBD 0.1143143 new users: RMSE 1.39339 MAE 0.77229 CBD 0.08769 new items: RMSE 1.23791 MAE 1.03512 CBD 0.06359  new users and items: RMSE 1.23843 MAE 0.99199 CBD 0.06166 testing_time 00:00:00.0139654
+
+R:\Github\EscapeRoomsRecSys\MyMediaLite>rating_prediction.exe --training-file=..\resources\tmp\train_file.csv --test-file=..\resources\tmp\test_file.csv --recommender=UserKNN                               
+training data: 20197 users, 375 items, 40022 ratings, sparsity 99.47158
+test data:     690 users, 257 items, 1234 ratings, sparsity 99.30412
+UserKNN k=80 correlation=BinaryCosine weighted_binary=False alpha=0; baseline predictor: reg_u=15 reg_i=10 num_iter=10  training_time 00:01:25.5278746 RMSE 1.30304 MAE 0.7664216 CBD 0.110606 new users: RMSE 1.39339 MAE 0.77229 CBD 0.08769 new items: RMSE 1.23791 MAE 1.03512 CBD 0.06359  new users and items: RMSE 1.23843 MAE 0.99199 CBD 0.06166 testing_time 00:00:09.0051521
+
+R:\Github\EscapeRoomsRecSys\MyMediaLite>rating_prediction.exe --training-file=..\resources\tmp\train_file.csv --test-file=..\resources\tmp\test_file.csv --recommender=TimeAwareBaseline                     
+
+R:\Github\EscapeRoomsRecSys\MyMediaLite>rating_prediction.exe --training-file=..\resources\tmp\train_file.csv --test-file=..\resources\tmp\test_file.csv --recommender=TimeAwareBaselineWithFrequencies      
+
+R:\Github\EscapeRoomsRecSys\MyMediaLite>rating_prediction.exe --training-file=..\resources\tmp\train_file.csv --test-file=..\resources\tmp\test_file.csv --recommender=CoClustering                          
+training data: 20197 users, 375 items, 40022 ratings, sparsity 99.47158
+test data:     690 users, 257 items, 1234 ratings, sparsity 99.30412
+CoClustering num_user_clusters=3 num_item_clusters=3 num_iter=30  training_time 00:00:00.6502899 RMSE 1.416496 MAE 0.9359788 CBD 0.1192518 new users: RMSE 1.44733 MAE 1.02466 CBD 0.09182 new items: RMSE 1.21762 MAE 1.00554 CBD 0.06256  new users and items: RMSE 1.23843 MAE 0.99199 CBD 0.06166 testing_time 00:00:00.0129633
+
+R:\Github\EscapeRoomsRecSys\MyMediaLite>rating_prediction.exe --training-file=..\resources\tmp\train_file.csv --test-file=..\resources\tmp\test_file.csv --recommender=Random                                
+training data: 20197 users, 375 items, 40022 ratings, sparsity 99.47158
+test data:     690 users, 257 items, 1234 ratings, sparsity 99.30412
+Random  training_time 00:00:00 RMSE 4.816882 MAE 4.049795 CBD 0.4373952 new users: RMSE 4.9981 MAE 4.2946 CBD 0.43335 new items: RMSE 5.11865 MAE 4.45125 CBD 0.41305  new users and items: RMSE 5.49533 MAE 4.88966 CBD 0.47526 testing_time 00:00:00.0139680
+
+R:\Github\EscapeRoomsRecSys\MyMediaLite>rating_prediction.exe --training-file=..\resources\tmp\train_file.csv --test-file=..\resources\tmp\test_file.csv --recommender=Constant                              
+training data: 20197 users, 375 items, 40022 ratings, sparsity 99.47158
+test data:     690 users, 257 items, 1234 ratings, sparsity 99.30412
+Constant constant_rating=1  training_time 00:00:00 RMSE 8.372216 MAE 8.225284 CBD 1.828217 new users: RMSE 8.67196 MAE 8.56307 CBD 1.90312 new items: RMSE 8.89522 MAE 8.84559 CBD 1.96576  new users and items: RMSE 8.89722 MAE 8.83951 CBD 1.96441 testing_time 00:00:00.0129655
+
+R:\Github\EscapeRoomsRecSys\MyMediaLite>rating_prediction.exe --training-file=..\resources\tmp\train_file.csv --test-file=..\resources\tmp\test_file.csv --recommender=LatentFeatureLogLinearModel           
+training data: 20197 users, 375 items, 40022 ratings, sparsity 99.47158
+test data:     690 users, 257 items, 1234 ratings, sparsity 99.30412
+LatentFeatureLogLinearModel num_factors=10 bias_reg=0.01 reg_u=0.015 reg_i=0.015 frequency_regularization=False learn_rate=0.01 bias_learn_rate=1 num_iter=30 loss=RMSE  training_time 00:00:03.0907328 RMSE 9.864996 MAE 6.459669 CBD 0.6873987 new users: RMSE 11.48294 MAE 7.95376 CBD 0.76585 new items: RMSE 20.98369 MAE 20.5855 CBD 1.93424  new users and items: RMSE 22.36241 MAE 22.33951 CBD 1.96441 testing_time 00:00:00.0149592
+
+R:\Github\EscapeRoomsRecSys\MyMediaLite>rating_prediction.exe --training-file=..\resources\tmp\train_file.csv --test-file=..\resources\tmp\test_file.csv --recommender=BiasedMatrixFactorization             
+training data: 20197 users, 375 items, 40022 ratings, sparsity 99.47158
+test data:     690 users, 257 items, 1234 ratings, sparsity 99.30412
+BiasedMatrixFactorization num_factors=10 bias_reg=0.01 reg_u=0.015 reg_i=0.015 frequency_regularization=False learn_rate=0.01 bias_learn_rate=1 learn_rate_decay=1 num_iter=30 bold_driver=False loss=RMSE max_threads=1 naive_parallelization=False  training_time 00:00:00.2164182 RMSE 1.38332 MAE 0.8477308 CBD 0.1144616 new users: RMSE 1.3844 MAE 0.76776 CBD 0.08628 new items: RMSE 1.30436 MAE 1.05987 CBD 0.06536  new users and items: RMSE 1.23843 MAE 0.99199 CBD 0.06166 testing_time 00:00:00.0109724
+
+R:\Github\EscapeRoomsRecSys\MyMediaLite>rating_prediction.exe --training-file=..\resources\tmp\train_file.csv --test-file=..\resources\tmp\test_file.csv --recommender=SVDPlusPlus                           
+training data: 20197 users, 375 items, 40022 ratings, sparsity 99.47158
+test data:     690 users, 257 items, 1234 ratings, sparsity 99.30412
+SVDPlusPlus num_factors=10 regularization=0.015 bias_reg=0.33 frequency_regularization=False learn_rate=0.001 bias_learn_rate=0.7 learn_rate_decay=1 num_iter=30  training_time 00:00:02.7057326 RMSE 1.319954 MAE 0.8506399 CBD 0.112603 new users: RMSE 1.40234 MAE 0.84064 CBD 0.08825 new items: RMSE 1.1928 MAE 0.99237 CBD 0.06144  new users and items: RMSE 1.23843 MAE 0.99199 CBD 0.06166 testing_time 00:00:00.0169549
+
+R:\Github\EscapeRoomsRecSys\MyMediaLite>rating_prediction.exe --training-file=..\resources\tmp\train_file.csv --test-file=..\resources\tmp\test_file.csv --recommender=SigmoidSVDPlusPlus                    
+training data: 20197 users, 375 items, 40022 ratings, sparsity 99.47158
+test data:     690 users, 257 items, 1234 ratings, sparsity 99.30412
+SigmoidSVDPlusPlus num_factors=10 regularization=0.015 bias_reg=0.33 frequency_regularization=False learn_rate=0.001 bias_learn_rate=0.7 learn_rate_decay=1 num_iter=30 loss=RMSE  training_time 00:00:02.7171675 RMSE 1.742806 MAE 0.7750884 CBD 0.1761483 new users: RMSE 1.43763 MAE 0.43757 CBD 0.10125 new items: RMSE 0.95085 MAE 0.15532 CBD 0.0386  new users and items: RMSE 1.02424 MAE 0.16142 CBD 0.03995 testing_time 00:00:00.0169549
+
+R:\Github\EscapeRoomsRecSys\MyMediaLite>rating_prediction.exe --training-file=..\resources\tmp\train_file.csv --test-file=..\resources\tmp\test_file.csv --recommender=SocialMF                              
+
+R:\Github\EscapeRoomsRecSys\MyMediaLite>rating_prediction.exe --training-file=..\resources\tmp\train_file.csv --test-file=..\resources\tmp\test_file.csv --recommender=SigmoidItemAsymmetricFactorModel      
+training data: 20197 users, 375 items, 40022 ratings, sparsity 99.47158
+test data:     690 users, 257 items, 1234 ratings, sparsity 99.30412
+SigmoidItemAsymmetricFactorModel num_factors=10 regularization=0.015 bias_reg=0.33 frequency_regularization=False learn_rate=0.001 bias_learn_rate=0.7 learn_rate_decay=1 num_iter=1 loss=30  training_time 00:00:02.4515302 RMSE 1.316782 MAE 0.9032084 CBD 0.1127023 new users: RMSE 1.40115 MAE 0.90089 CBD 0.08773 new items: RMSE 1.13734 MAE 0.93712 CBD 0.0582  new users and items: RMSE 1.23117 MAE 0.98209 CBD 0.0611 testing_time 00:00:00.0169583
+
+R:\Github\EscapeRoomsRecSys\MyMediaLite>rating_prediction.exe --training-file=..\resources\tmp\train_file.csv --test-file=..\resources\tmp\test_file.csv --recommender=SigmoidUserAsymmetricFactorModel      
+training data: 20197 users, 375 items, 40022 ratings, sparsity 99.47158
+test data:     690 users, 257 items, 1234 ratings, sparsity 99.30412
+SigmoidUserAsymmetricFactorModel num_factors=10 regularization=0.015 bias_reg=0.33 frequency_regularization=False learn_rate=0.001 bias_learn_rate=0.7 learn_rate_decay=1 num_iter=30 loss=RMSE  training_time 00:00:22.0111215 RMSE 1.368165 MAE 0.9419381 CBD 0.1149892 new users: RMSE 1.40956 MAE 0.90885 CBD 0.08801 new items: RMSE 1.23779 MAE 1.03301 CBD 0.06361  new users and items: RMSE 1.23871 MAE 0.99241 CBD 0.06168 testing_time 00:00:00.0159576
+
+R:\Github\EscapeRoomsRecSys\MyMediaLite>rating_prediction.exe --training-file=..\resources\tmp\train_file.csv --test-file=..\resources\tmp\test_file.csv --recommender=SigmoidCombinedAsymmetricFactorModel  
+training data: 20197 users, 375 items, 40022 ratings, sparsity 99.47158
+test data:     690 users, 257 items, 1234 ratings, sparsity 99.30412
+SigmoidCombinedAsymmetricFactorModel num_factors=10 regularization=0.015 bias_reg=0.33 frequency_regularization=False learn_rate=0.001 bias_learn_rate=0.7 learn_rate_decay=1 num_iter=30 loss=RMSE  training_time 00:00:23.0167686 RMSE 1.315965 MAE 0.9058287 CBD 0.1127814 new users: RMSE 1.40618 MAE 0.90294 CBD 0.08824 new items: RMSE 1.18016 MAE 0.97797 CBD 0.06059  new users and items: RMSE 1.23728 MAE 0.99096 CBD 0.06158 testing_time 00:00:00.0189488
+
+R:\Github\EscapeRoomsRecSys\MyMediaLite>rating_prediction.exe --training-file=..\resources\tmp\train_file.csv --test-file=..\resources\tmp\test_file.csv --recommender=NaiveBayes                            
+
+R:\Github\EscapeRoomsRecSys\MyMediaLite>rating_prediction.exe --training-file=..\resources\tmp\train_file.csv --test-file=..\resources\tmp\test_file.csv --recommender=ExternalRatingPredictor               
+training data: 20197 users, 375 items, 40022 ratings, sparsity 99.47158
+test data:     690 users, 257 items, 1234 ratings, sparsity 99.30412
+ExternalRatingPredictor prediction_file=FILENAME 
+R:\Github\EscapeRoomsRecSys\MyMediaLite>rating_prediction.exe --training-file=..\resources\tmp\train_file.csv --test-file=..\resources\tmp\test_file.csv --recommender=GSVDPlusPlus                          

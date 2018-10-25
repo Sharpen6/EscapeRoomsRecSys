@@ -1,0 +1,4 @@
+,alg,AUC,prec@5,prec@10,MAP,recall@5,recall@10,NDCG,MRR,filled_with_popular,clean_fake_method
+0,K-markov(k=2)TrueNo Clean,0.56547,0.02319,0.02058,0.02922,0.04615,0.08264,0.04874,0.05504,True,No Clean
+1,K-markov(k=3)TrueNo Clean,0.55062,0.02,0.01594,0.02418,0.03617,0.05858,0.03849,0.05104,True,No Clean
+2,K-markov-latest(k=2)TrueNo Clean,0.53726,0.01101,0.01072,0.01463,0.02426,0.04145,0.0245,0.02815,True,No Clean

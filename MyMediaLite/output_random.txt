@@ -1,0 +1,5 @@
+
+R:\Github\EscapeRoomsRecSys\MyMediaLite>rating_prediction.exe --training-file=..\resources\aggregated\no_new_in_test\train.csv --test-file=..\resources\aggregated\no_new_in_test\test.csv --recommender=Random       
+training data: 20197 users, 375 items, 40022 ratings, sparsity 99.47158
+test data:     227 users, 216 items, 687 ratings, sparsity 98.59887
+Random  training_time 00:00:00 RMSE 4.636381 MAE 3.853803 CBD 0.4297019 new items: RMSE 5.08668 MAE 4.44507 CBD 0.43291 testing_time 00:00:00.0139625
