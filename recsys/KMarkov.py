@@ -3,6 +3,7 @@ from tqdm import tqdm
 import numpy as np
 import operator
 from top_n_algorithms import TopNRecsys
+import datetime
 
 class k_markov_rc(TopNRecsys):
 
@@ -22,7 +23,7 @@ class k_markov_rc(TopNRecsys):
             df_user_ratings = self.train_set[self.train_set.userID == userID]
 
             grouped_by_time = df_user_ratings.groupby('timestamp')['itemID'].apply(list).reset_index()
-            grouped_by_time['timestamp'] = grouped_by_time['timestamp'].astype('datetime64[ns]')
+            #grouped_by_time['timestamp'] = grouped_by_time['timestamp'].astype('datetime64[ns]')
             grouped_by_time = grouped_by_time.sort_values(by='timestamp')
             grouped_by_time = grouped_by_time.set_index('timestamp')
             grouped_items = [val.tolist()[0] for key, val in grouped_by_time.iterrows()]

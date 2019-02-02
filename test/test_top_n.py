@@ -87,12 +87,14 @@ class TestRecSysMethods(unittest.TestCase):
         filename = datetime.datetime.now().strftime("%Y-%m-%d-%H-%M")
         stats.to_csv('..\\resources\\results\\Escape_rooms_top_n_results' + filename + '__no_new_users_in_test.csv')
         print('Done')
-
+        self.assertTrue(True)
     def calc_precision_auc(self, train_set, test_set, algs_results):
         mean_average_precision = {}
         precision_at_5 = {}
         precision_at_10 = {}
-        df_stats = pd.DataFrame(columns=['alg','map','prec@5','prec@10'])
+        recall_at_5 = {}
+        recall_at_10 = {}
+        df_stats = pd.DataFrame(columns=['alg','map','prec@5','prec@10','recall@5','recall@10'])
 
         for method, (recommendations, filled_with_pop, clean_faked) in algs_results.items():
             for userID in test_set.userID.unique():
@@ -107,20 +109,24 @@ class TestRecSysMethods(unittest.TestCase):
 
                 found = 0
                 precision_at = {}
+                recall_at = {}
                 for i in range(10):
                     if correct_at_index[i] == 1:
                         found += 1
                     precision_at[i] = found/float(i+1)
+                    recall_at[i] = found/float(i+1)
 
                 mean_average_precision[userID] = np.mean([x[1] for x in precision_at.items()])
                 precision_at_5[userID] = precision_at[4]
                 precision_at_10[userID] = precision_at[9]
-
+                recall_at_5[userID] = recall_at[4]
+                recall_at_10[userID] = recall_at[9]
             MAP = np.mean([x[1] for x in mean_average_precision.items()])
             Prec_5 = np.mean([x[1] for x in precision_at_5.items()])
             Prec_10 = np.mean([x[1] for x in precision_at_10.items()])
-
-            df_stats = df_stats.append({'alg':method,'map':MAP ,'prec@5':Prec_5,'prec@10':Prec_10}, ignore_index=True)
+            Recall_5 = np.mean([x[1] for x in recall_at_5.items()])
+            Recall_10 = np.mean([x[1] for x in recall_at_10.items()])
+            df_stats = df_stats.append({'alg':method,'map':MAP ,'prec@5':Prec_5,'prec@10':Prec_10,'recall@5':Recall_5,'recall@10':Recall_10}, ignore_index=True)
         return df_stats
 
 
